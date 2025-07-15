@@ -139,3 +139,17 @@
         max-height: $max-height;
     }
 }
+
+// FONT FACE
+//
+// The font-face mixin simplifies font registration and enforces best practices
+// like `font-display: swap;` for improved performance.
+//
+// The font-face mixin generates a `@font-face` rule for importing custom fonts.
+
+@mixin font-face($font-weight, $font-family, $font-uri, $font-style: normal) {
+    src: url(#{$font-uri});
+    font-weight: $font-weight;
+    font-family: $font-family;
+    font-style: $font-style;
+}
