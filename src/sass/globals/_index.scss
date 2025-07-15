@@ -8,3 +8,5 @@
 // - _reset.scss        : Resets browser default styles for consistency
 // - _fonts.scss        : Custom font-face declarations using `font-face` mixin
 // - _boilerplate.scss  : Base HTML elements, body styles and default typography
+
+@forward 'reset';
