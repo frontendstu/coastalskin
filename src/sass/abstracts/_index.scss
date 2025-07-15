@@ -8,3 +8,5 @@
 // Included partials:
 // - _variables.scss    : Defines CSS custom properties
 // - _mixins.scss       : Contains reusable mixins for layout, components, etc.
+
+@forward 'variables';
