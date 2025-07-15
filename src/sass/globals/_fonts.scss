@@ -1,0 +1,13 @@
+/**
+ * FONTS
+ *
+ * The fonts partial handles custom font imports for the project using the 
+ * `font-face` mixin. It ensures that fonts are loaded efficiently and 
+ * consistently across the site.
+ *
+ * Font files are imported using `font-display: swap` for performance, and 
+ * `font-weight` and `font-style` are declared explicity for clarity and 
+ * control.
+ */
+
+@use '../abstracts/mixins' as mixin;
