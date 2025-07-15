@@ -153,3 +153,75 @@
     font-family: $font-family;
     font-style: $font-style;
 }
+
+// BUTTON
+//
+// The btn mixin provides a flexible reusable pattern for styling buttons and
+// interactive elements. It supports a range of optional parameters for layout,
+// typography, colour, border, and hover states.
+//
+// The button mixin is designed to apply base styles as well as changes on
+// `:hover` and `:focus-within`, allowing consistent appearance and behaviour
+// across different button types and use cases.
+
+@mixin btn(
+    $gap: null,
+    $width: fit-content,
+    $padding: var(--btn-p),
+    $transition: var(--btn-transition),
+    $radius: var(--btn-radius),
+    $border-width: 1px,
+    $border-color: transparent,
+    $border-color-hover: null,
+    $border: $border-width solid $border-color,
+    $bg: var(--btn-bg),
+    $bg-hover: var(--btn-bg-hover),
+    $color: var(--btn-clr),
+    $color-hover: var(--btn-clr-hover),
+    $font-weight: var(--btn-fw),
+    $font-size: var(--btn-fs),
+    $font-family: var(--btn-ff),
+    $tracking: null,
+    $case: var(--btn-case),
+    $decoration: none,
+    $decoration-hover: none,
+    $outline-color: null,
+    $outline-offset: null
+) {
+    display: flex;
+    width: $width;
+    padding: $padding;
+    transition: $transition;
+    border: $border-width solid $border-color;
+    background-color: $bg;
+    color: $color;
+    font: $font-weight $font-size $font-family;
+    text-transform: $case;
+    text-decoration: $decoration;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $tracking != null {
+        letter-spacing: $tracking;
+    }
+
+    &:hover,
+    &:focus-within {
+        background-color: $bg-hover;
+        color: $color-hover;
+        text-decoration: $decoration-hover;
+
+        @if $border-color-hover != null {
+            border-color: $border-color-hover;
+        }
+    }
+
+    @if $outline-color != null or $outline-offset != null {
+        &:focus-within {
+            outline-color: $outline-color;
+            outline-offset: $outline-offset;
+        }
+    }
+}
