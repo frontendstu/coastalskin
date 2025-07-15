@@ -116,3 +116,26 @@
         left: $left;
     }
 }
+
+// SIZE
+//
+// The size utility mixin allows for applying element dimension.
+// Accepts width, height, max-width, max-height as optional parameters
+
+@mixin size($width: null, $height: null, $max-width: null, $max-height: null) {
+    @if $width != null {
+        width: $width;
+    }
+
+    @if $height != null {
+        height: $height;
+    }
+
+    @if $max-width != null {
+        max-width: $max-width;
+    }
+
+    @if $max-height != null {
+        max-height: $max-height;
+    }
+}
