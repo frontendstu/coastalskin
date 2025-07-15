@@ -24,3 +24,16 @@
     $font-weight: 700,
     $font-family: 'Cadiz Bold'
 );
+
+/* Ivy Mode */
+@include mixin.font-face(
+    $font-uri: '/assets/fonts/ivy-mode/IvyMode-Regular.ttf',
+    $font-weight: 400,
+    $font-family: 'Ivy Mode Regular'
+);
+
+@include mixin.font-face(
+    $font-uri: 'assets/fonts/ivy-mode/IvyMode-SemiBold.ttf',
+    $font-weight: 600,
+    $font-family: 'Ivy Mode Semibold'
+);
