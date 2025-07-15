@@ -82,3 +82,37 @@
         gap: $gap;
     }
 }
+
+// POSITION
+//
+// The position mixin sets the CSS `position` property and optional directional
+// offsets. It includes validation to ensure `$type` is one of the allowed CSS
+// values.
+
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    // Define the list of valid CSS position types
+    $valid-types: static, relative, absolute, sticky, fixed;
+
+    // Check if the passed $type is valid
+    @if not index($valid-types, $type) {
+        @error "🚫 Invalud position type '#{$type}'. Must be one of: #{join($valid-types, ', ')}.";
+    }
+
+    position: $type;
+
+    @if $top != null {
+        top: $top;
+    }
+
+    @if $right != null {
+        right: $right;
+    }
+
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+
+    @if $left != null {
+        left: $left;
+    }
+}
