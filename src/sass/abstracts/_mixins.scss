@@ -5,3 +5,56 @@
 // such as UI elements, layout utilities, etc.
 //
 // Mixins are intended to keep declarations DRY and maintainable
+
+// LINK STATES
+//
+// These link state mixins provide reusable patterns for managing link and
+// interactive element states. They encapsulate common pseudo-class
+// combinations to ensure consistent styling and accessibility across the UI.
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin focus {
+    &:focus {
+        @content;
+    }
+}
+
+@mixin focus-within {
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-within {
+    &:hover,
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin focus-all {
+    &:focus,
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin hover-all {
+    &:hover,
+    &:focus,
+    &:focus-within {
+        @content;
+    }
+}
