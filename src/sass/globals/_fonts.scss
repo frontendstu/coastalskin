@@ -11,3 +11,16 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/* Cadiz */
+@include mixin.font-face(
+    $font-uri: '/assets/fonts/cadiz/Cadiz-Regular.ttf',
+    $font-weight: 400,
+    $font-family: 'Cadiz Regular'
+);
+
+@include mixin.font-face(
+    $font-uri: '/assets/fonts/cadiz/Cadiz-Bold.ttf',
+    $font-weight: 700,
+    $font-family: 'Cadiz Bold'
+);
