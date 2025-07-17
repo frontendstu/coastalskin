@@ -109,4 +109,26 @@
     --link-outline-radius: 2px;
     --link-outline-offset: 4px;
     --link-outline: 2px solid hsl(214 94% 68%);
+
+    /* ---------- LAYOUT */
+
+    /* Container */
+    --container-max-w: 21.375rem;
+    --container-p: 0.375rem;
+
+    /* -------------------------------------------------------------------------
+     * MEDIA QUERIES
+     * ---------------------------------------------------------------------- */
+
+    /* ---------- 768px */
+    @media (min-width: 48em) {
+        --container-max-w: 43.125rem;
+        --container-p: 0.5rem;
+    }
+
+    /* ---------- 1280px */
+    @media (min-width: 80em) {
+        --container-max-w: 55.875rem;
+        --container-p: 0.75rem;
+    }
 }
