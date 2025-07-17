@@ -82,17 +82,21 @@
      * applied in the markup. There isn't any default global heading levels 
      * styled in the boilerplate. It is up to you to define the styles for the 
      * `.heading` utility class. The default styles only contain the 
-     * `font-weight`, `font-family` and `line-height`. The `font-size` will 
-     * need to be defined when required.
+     * `font-weight`, `font-family` and `line-height`. A `font-size`
+     * will need to be defined when required.
      */
 
+    --heading-clr: var(--clr-pri-hsl);
     --heading-fw: var(--fw-semibold);
     --heading-ff: var(--ff-sec);
     --heading-leading: 1.1;
 
     --heading-alt-clr: var(--clr-neutral-500-hsl);
     --heading-alt-fw: var(--fw-bold);
+    --heading-alt-fs: 80%;
     --heading-alt-ff: var(--ff-pri-bld);
+    --heading-alt-font: var(--heading-alt-fw) var(--heading-alt-fs)
+        var(--heading-alt-ff);
     --heading-alt-tracking: 2px;
     --heading-alt-leading: 1.25;
 
