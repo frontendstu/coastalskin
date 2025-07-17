@@ -89,4 +89,13 @@
     --heading-fw: var(--fw-semibold);
     --heading-ff: var(--ff-sec);
     --heading-leading: 1.1;
+
+    /* ---------- LINKS */
+    --link-transition: color 200ms ease-in-out;
+    --link-clr: inherit;
+    --link-clr-hover: var(--clr-sec-hsl);
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-outline-offset: 4px;
+    --link-outline: 2px solid hsl(214 94% 68%);
 }
