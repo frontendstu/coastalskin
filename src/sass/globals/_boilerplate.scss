@@ -23,3 +23,25 @@ body {
     line-height: var(--copy-leading);
     letter-spacing: var(--copy-tracking);
 }
+
+/* -----------------------------------------------------------------------------
+ * Heading
+ * -----------------------------------------------------------------------------
+ *
+ * Applies consistent color, font weight, font family and line height to all 
+ * primary headings. The `.heading-alt` modifier provides an alternate heading 
+ * style with a different `color` and complete font declaration, useful for 
+ * emphasis or themed sections. 
+ */
+
+.heading {
+    color: var(--heading-clr);
+    font-weight: var(--heading-fw);
+    font-family: var(--heading-ff);
+    line-height: var(--heading-leading);
+
+    &-alt {
+        color: var(--heading-alt-clr);
+        font: var(--heading-alt-font);
+    }
+}
