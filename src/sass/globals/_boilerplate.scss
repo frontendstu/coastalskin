@@ -7,3 +7,19 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/* -----------------------------------------------------------------------------
+ * Body
+ * -----------------------------------------------------------------------------
+ *
+ * Sets the base type colour, font, line height and letter spacing using the 
+ * copy custom properties to ensure consistent and maintainable typography 
+ * across the site.
+ */
+
+body {
+    color: var(--copy-clr);
+    font: var(--copy-font);
+    line-height: var(--copy-leading);
+    letter-spacing: var(--copy-tracking);
+}
