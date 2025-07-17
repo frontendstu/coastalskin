@@ -45,7 +45,7 @@
     --clr-sec-hsl: hsl(var(--clr-sec));
     --clr-scnt-hsl: hsl(var(--clr-acnt));
 
-    // ---------- FONTS
+    /* ---------- FONTS */
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
@@ -63,4 +63,6 @@
     --ff-pri-bld: 'Cadiz Bold', sans-serif;
     --ff-sec: 'Ivy Mode Semibold', serif;
     --ff-sec-reg: 'Ivy Mode Regular', serif;
+
+    /* ---------- TYPOGRAPHY */
 }
