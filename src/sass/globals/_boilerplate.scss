@@ -70,3 +70,16 @@ a {
         border-radius: var(--link-outline-radius);
     }
 }
+
+/* -----------------------------------------------------------------------------
+ * Screen Reader Only
+ * -----------------------------------------------------------------------------
+ *
+ * A accessibility utility class to make content or instructions only visible to
+ * screen readers. The `sr-only` class uses the `sr-only` mixin. The `sr-only` 
+ * mixin is used to prevent repeating styles and acts as a helper method.
+ */
+
+.sr-only {
+    @include mixin.sr-only;
+}
