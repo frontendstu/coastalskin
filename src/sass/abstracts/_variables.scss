@@ -122,6 +122,8 @@
 
     /* ---------- 768px */
     @media (min-width: 48em) {
+        --copy-fs: var(--fs-300);
+
         --container-max-w: 43.125rem;
         --container-p: 0.5rem;
     }
