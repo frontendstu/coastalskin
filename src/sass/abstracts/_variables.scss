@@ -90,6 +90,12 @@
     --heading-ff: var(--ff-sec);
     --heading-leading: 1.1;
 
+    --heading-alt-clr: var(--clr-neutral-500-hsl);
+    --heading-alt-fw: var(--fw-bold);
+    --heading-alt-ff: var(--ff-pri-bld);
+    --heading-alt-tracking: 2px;
+    --heading-alt-leading: 1.25;
+
     /* ---------- LINKS */
     --link-transition: color 200ms ease-in-out;
     --link-clr: inherit;
