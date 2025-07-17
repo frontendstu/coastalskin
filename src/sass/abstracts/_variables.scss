@@ -65,4 +65,13 @@
     --ff-sec-reg: 'Ivy Mode Regular', serif;
 
     /* ---------- TYPOGRAPHY */
+
+    /* Copy */
+    --copy-clr: var(--clr-neutral-700-hsl);
+    --copy-fw: var(--fw-regular);
+    --copy-fs: var(--fs-200);
+    --copy-ff: var(--ff-pri);
+    --copy-font: var(--copy-fw) var(--copy-fs) var(--copy-ff);
+    --copy-leading: 1.5;
+    --copy-tracking: 1px;
 }
