@@ -74,4 +74,19 @@
     --copy-font: var(--copy-fw) var(--copy-fs) var(--copy-ff);
     --copy-leading: 1.5;
     --copy-tracking: 1px;
+
+    /* Heading */
+
+    /**
+     * The `.heading` utility class must be applied anytime a heading level is 
+     * applied in the markup. There isn't any default global heading levels 
+     * styled in the boilerplate. It is up to you to define the styles for the 
+     * `.heading` utility class. The default styles only contain the 
+     * `font-weight`, `font-family` and `line-height`. The `font-size` will 
+     * need to be defined when required.
+     */
+
+    --heading-fw: var(--fw-semibold);
+    --heading-ff: var(--ff-sec);
+    --heading-leading: 1.1;
 }
