@@ -45,3 +45,28 @@ body {
         font: var(--heading-alt-font);
     }
 }
+
+/* -----------------------------------------------------------------------------
+ * Links
+ * -----------------------------------------------------------------------------
+ *
+ * Defines base link appearance with transition, color, and text decoration 
+ * using custom properties. Includes hover and focus states via mixins.
+ */
+
+a {
+    transition: var(--link-transition);
+    color: var(--link-clr);
+    text-decoration: var(--link-decoration);
+
+    @include mixin.hover-all {
+        color: var(--link-clr-hover);
+        text-decoration: var(--link-decoration-hover);
+    }
+
+    @include mixin.focus-all {
+        outline: var(--link-outline);
+        outline-offset: var(--link-outline-offset);
+        border-radius: var(--link-outline-radius);
+    }
+}
