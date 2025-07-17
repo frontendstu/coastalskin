@@ -9,7 +9,8 @@
 :root {
     /* ---------- COLOURS */
 
-    /* A note on the colour custom properties. You will see that there is two 
+    /**
+     * A note on the colour custom properties. You will see that there is two 
      * sets of repeating colour values, one set isn't prefix with hsl and one 
      * set is prefixed with hsl. The custom properties that haven't been 
      * prefixed with hsl are the raw hsl values. In order to correctly use 
@@ -43,4 +44,23 @@
     --clr-pri-hsl: hsl(var(--clr-pri));
     --clr-sec-hsl: hsl(var(--clr-sec));
     --clr-scnt-hsl: hsl(var(--clr-acnt));
+
+    // ---------- FONTS
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --fs-100: 0.75rem; /* 12px */
+    --fs-200: 0.875rem; /* 14px */
+    --fs-300: 1rem; /* 16px */
+    --fs-400: 1.125rem; /* 18px */
+    --fs-500: 1.25rem; /* 20px */
+    --fs-600: 1.625rem; /* 26px */
+    --fs-700: 1.75rem; /* 28px */
+    --fs-800: 2.25rem; /* 36px */
+
+    --ff-pri: 'Cadiz Regular', sans-serif;
+    --ff-pri-bld: 'Cadiz Bold', sans-serif;
+    --ff-sec: 'Ivy Mode Semibold', serif;
+    --ff-sec-reg: 'Ivy Mode Regular', serif;
 }
