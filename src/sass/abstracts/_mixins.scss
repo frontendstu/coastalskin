@@ -233,42 +233,18 @@
 
     @if $radius != null {
         border-radius: $radius;
-
-        &:hover,
-        &:focus-within {
-            border-radius: $radius;
-        }
     }
 
     @if $border-width != null or $border-clr != null {
         border: $border-width solid $border-clr;
-
-        &:hover,
-        &:focus-within {
-            border-color: $border-clr-hover;
-        }
     }
 
     @if $bg != null {
         background-color: $bg;
     }
 
-    @if $bg-hover != null {
-        &:hover,
-        &:focus-within {
-            background-color: $bg-hover;
-        }
-    }
-
     @if $color != null {
         color: $color;
-    }
-
-    @if $color-hover != null {
-        &:hover,
-        &:focus-within {
-            color: $color-hover;
-        }
     }
 
     @if $font-weight != null {
@@ -300,6 +276,32 @@
     @if $outline-offset != null {
         &:focus-within {
             outline-offset: $outline-offset;
+        }
+    }
+
+    @if $radius !=
+        null or
+        $border-clr-hover !=
+        null or
+        $bg-hover !=
+        null or
+        $color-hover !=
+        null
+    {
+        &:hover,
+        &:focus-within {
+            @if $radius != null {
+                border-radius: $radius;
+            }
+            @if $border-clr-hover != null {
+                border-color: $border-clr-hover;
+            }
+            @if $bg-hover != null {
+                background-color: $bg-hover;
+            }
+            @if $color-hover != null {
+                color: $color-hover;
+            }
         }
     }
 }
