@@ -120,7 +120,7 @@
 
     // Check if the passed $type is valid
     @if not index($valid-types, $type) {
-        @error "🚫 Invalud position type '#{$type}'. Must be one of: #{join($valid-types, ', ')}.";
+        @error "🚫 Invalid position type '#{$type}'. Must be one of: #{join($valid-types, ', ')}.";
     }
 
     position: $type;
