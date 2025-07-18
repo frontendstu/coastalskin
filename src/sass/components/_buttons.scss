@@ -31,3 +31,20 @@
         $outline-offset: var(--btn-outline-offset)
     );
 }
+
+/**
+ * Button Utility Classes
+ *
+ * Button utility classes adjust the appearance of a button, for example the `.
+ * btn-pill` utility class will make the radius of a button circular giving the 
+ * button an appearance of being a pill shape. The `.btn-group` will group 
+ * buttons together horizontally and apply a gap between each button.
+ */
+
+.btn-pill {
+    border-radius: 99vw;
+
+    @include mixin.hover-focus-within {
+        border-radius: 99vw;
+    }
+}
