@@ -135,24 +135,27 @@
 
     --btn-solid-clr: var(--clr-neutral-100-hsl);
     --btn-outlined-bg: transparent;
+    --btn-solid-hover-alpha: 0.7;
 
     --btn-pri: var(--clr-pri-hsl);
-    --btn-pri-hover: hsl(var(--clr-pri) / 0.7);
+    --btn-pri-hover: hsl(var(--clr-pri) / var(--btn-solid-hover-alpha));
     --btn-pri-clr: var(--btn-solid-clr);
     --btn-pri-outlined-clr: var(--clr-pri-hsl);
 
     --btn-sec: var(--clr-sec-hsl);
-    --btn-sec-hover: hsl(var(--clr-sec) / 0.7);
+    --btn-sec-hover: hsl(var(--clr-sec) / var(--btn-solid-hover-alpha));
     --btn-sec-clr: var(--btn-solid-clr);
     --btn-sec-outlined-clr: var(--clr-sec-hsl);
 
     --btn-acnt: var(--clr-acnt-hsl);
-    --btn-acnt-hover: hsl(var(--clr-acnt) / 0.7);
+    --btn-acnt-hover: hsl(var(--clr-acnt) / var(--btn-solid-hover-alpha));
     --btn-acnt-clr: var(--btn-solid-clr);
     --btn-pri-outlined-clr: var(--clr-acnt-hsl);
 
     --btn-ondark: var(--clr-neutral-100-hsl);
-    --btn-ondark-hover: hsl(var(--clr-neutral-100) / 0.7);
+    --btn-ondark-hover: hsl(
+        var(--clr-neutral-100) / var(--btn-solid-hover-alpha)
+    );
     --btn-ondark-clr: var(--clr-pri-hsl);
     --btn-ondark-outlined: transparent;
 
