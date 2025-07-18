@@ -133,9 +133,11 @@
 
     --btn-group-gap: 2rem;
 
+    --btn-solid-clr: var(--clr-neutral-100-hsl);
+
     --btn-pri: var(--clr-pri-hsl);
     --btn-pri-hover: hsl(var(--clr-pri) / 0.7);
-    --btn-pri-clr: var(--clr-neutral-100-hsl);
+    --btn-pri-clr: var(--btn-solid-clr);
     --btn-pri-outlined-clr: var(--clr-pri-hsl);
 
     /* -------------------------------------------------------------------------
