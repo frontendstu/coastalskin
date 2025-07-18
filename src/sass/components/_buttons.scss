@@ -52,3 +52,41 @@
 .btn-group {
     @include mixin.flex($gap: var(--btn-group-gap));
 }
+
+/**
+ * Button Themes
+ *
+ * These styles style the theme of a button. This includes the solid and 
+ * outlined themes.
+ */
+
+$btn-theme: (
+    primary: 'pri',
+    secondary: 'sec',
+    accent: 'acnt',
+    ondark: 'ondark',
+);
+
+@each $name, $prefix in $btn-theme {
+    /* Solid Buttons */
+    .btn-#{$name} {
+        @include mixin.btn(
+            $bg: var(--btn-#{$prefix}),
+            $bg-hover: var(--btn-#{$prefix}-hover),
+            $color: var(--btn-#{$prefix}-clr),
+            $color-hover: var(--btn-#{$prefix}-clr),
+            $outline-color: var(--btn-#{$prefix}-hover)
+        );
+    }
+
+    /* Outlined Buttons */
+    .btn-#{$name}-outlined {
+        @include mixin.btn(
+            $border-clr: var(--btn-#{$prefix}),
+            $bg: var(--btn-outlined-bg),
+            $bg-hover: var(--btn-#{$prefix}),
+            $color: var(--btn-#{$prefix}),
+            $color-hover: var(--btn-#{$prefix}-clr)
+        );
+    }
+}
