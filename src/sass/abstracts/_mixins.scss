@@ -240,7 +240,7 @@
         }
     }
 
-    @if $border-width != null and $border-clr != null {
+    @if $border-width != null or $border-clr != null {
         border: $border-width solid $border-clr;
 
         &:hover,
