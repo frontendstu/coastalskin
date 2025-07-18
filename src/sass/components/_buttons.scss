@@ -48,3 +48,7 @@
         border-radius: 99vw;
     }
 }
+
+.btn-group {
+    @include mixin.flex($gap: var(--btn-group-gap));
+}
