@@ -140,6 +140,11 @@
     --btn-pri-clr: var(--btn-solid-clr);
     --btn-pri-outlined-clr: var(--clr-pri-hsl);
 
+    --btn-sec: var(--clr-sec-hsl);
+    --btn-sec-hover: hsl(var(--clr-sec) / 0.7);
+    --btn-sec-clr: var(--btn-solid-clr);
+    --btn-sec-outlined-clr: var(--clr-sec-hsl);
+
     /* -------------------------------------------------------------------------
      * MEDIA QUERIES
      * ---------------------------------------------------------------------- */
