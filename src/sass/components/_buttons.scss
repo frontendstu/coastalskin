@@ -7,3 +7,27 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * Button
+ *
+ * The `.btn` class sets up the global styles for a button. The `.btn` class 
+ * must be delcared before a button theme in order to display correctly. 
+ */
+
+.btn {
+    @include mixin.btn(
+        $padding: var(--btn-p),
+        $radius: var(--btn-radius),
+        $transition: var(--btn-transition),
+        $border-width: var(--btn-border-w),
+        $border-clr: var(--btn-border-clr),
+        $border-clr-hover: var(--btn-border-clr-hover),
+        $font-weight: var(--btn-fw),
+        $font-size: var(--btn-fs),
+        $font-family: var(--btn-ff),
+        $case: var(--btn-case),
+        $tracking: var(--btn-tracking),
+        $outline-offset: var(--btn-outline-offset)
+    );
+}
