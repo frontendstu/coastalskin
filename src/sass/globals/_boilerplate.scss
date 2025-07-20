@@ -65,9 +65,12 @@ a {
     }
 
     @include mixin.focus-all {
-        outline: var(--link-outline);
-        outline-offset: var(--link-outline-offset);
-        border-radius: var(--link-outline-radius);
+        @include mixin.outline(
+            $width: var(--link-outline-width),
+            $color: var(--link-outline-clr),
+            $offset: var(--link-outline-offset),
+            $radius: var(--link-outline-radius)
+        );
     }
 }
 
