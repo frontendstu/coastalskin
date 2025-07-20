@@ -305,3 +305,37 @@
         }
     }
 }
+
+// -----------------------------------------------------------------------------
+// OUTLINE
+//
+// The outline mixin creates an extended shorthand of the outline property. The
+// way the outline mixin extends the outline shorthand property is that it
+// allows for `outline-offset` and `border-radius`.
+// -----------------------------------------------------------------------------
+
+@mixin outline(
+    $width: null,
+    $style: solid,
+    $color: null,
+    $offset: null,
+    $radius: null
+) {
+    outline-style: $style;
+
+    @if $width != null {
+        outline-width: $width;
+    }
+
+    @if $offset != null {
+        outline-offset: $offset;
+    }
+
+    @if $radius != null {
+        border-radius: $radius;
+    }
+
+    @if $width != null and $style != null and $color != null {
+        outline: $width $style $color;
+    }
+}
