@@ -6,6 +6,8 @@
 //
 // Mixins are intended to keep declarations DRY and maintainable
 
+@use 'sass:list';
+
 // -----------------------------------------------------------------------------
 // LINK STATES
 //
@@ -119,8 +121,8 @@
     $valid-types: static, relative, absolute, sticky, fixed;
 
     // Check if the passed $type is valid
-    @if not index($valid-types, $type) {
-        @error "🚫 Invalid position type '#{$type}'. Must be one of: #{join($valid-types, ', ')}.";
+    @if not list.index($valid-types, $type) {
+        @error "🚫 Invalid position type '#{$type}'. Must be one of: #{list.join($valid-types, ', ')}.";
     }
 
     position: $type;
