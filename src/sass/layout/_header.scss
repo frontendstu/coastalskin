@@ -42,6 +42,7 @@
         }
     }
 
+    /* Site Header Menu */
     &-menu {
         @include mixin.position(
             $type: absolute,
