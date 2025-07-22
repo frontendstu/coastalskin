@@ -58,3 +58,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+/**
+ * SITE BRANDING SWITCH
+ * -----------------------------------------------------------------------------
+ *
+ * This script dynamically updates the logo appearance based on the scroll
+ * position. When the user scrolls down the page, a specific CSS class is added
+ * to the site header to change its style, and the site logo is swapped to the
+ * "primary" version. When the user scrolls back to the top, the original
+ * styles and logo are restored.
+ */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.site-header');
+    const logo = document.querySelector('#site-branding');
+
+    function updateHeaderOnScroll() {
+        if (!logo || !header) return;
+
+        if (window.scrollY > 10) {
+            header.classList.add('site-header-menu-scrolled');
+            logo.src = logo.dataset.logoPrimary;
+        } else {
+            header.classList.remove('header-menu-scrolled');
+            logo.src = logo.dataset.logoSecondary;
+        }
+    }
+
+    updateHeaderOnScroll(); // initial check
+    window.addEventListener('scroll', updateHeaderOnScroll);
+});
