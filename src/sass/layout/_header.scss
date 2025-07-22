@@ -29,4 +29,16 @@
     &-hidden {
         transform: translateY(-100vh);
     }
+
+    /* Site Header Branding */
+    &-branding a {
+        display: block;
+        width: 9rem;
+        opacity: 1;
+        transition: opacity 200ms ease-in-out;
+
+        @include mixin.hover-focus {
+            opacity: 0.5;
+        }
+    }
 }
