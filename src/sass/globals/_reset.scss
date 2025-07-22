@@ -12,6 +12,7 @@
  * - Ensures body takes up full viewport
  * - Media elements (img, video, svg, picture) are block-level and responsive
  * - Removes default list styles from `<ul>` and `<ol>` elements
+ * - Removes default button styles from `<button>` element
  *
  * This reset is intentionally lightweight and designed to compliment 
  * boilerplate and component styles without having to introduce heavy-handed 
@@ -49,4 +50,10 @@ video {
 ul,
 ol {
     list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
