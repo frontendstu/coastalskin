@@ -26,8 +26,8 @@ console.log('Hello from scripts.js');
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const headerMenuToggle = document.querySelector('.header-menu-toggle');
-    const headerMenu = document.querySelector('#header-menu');
+    const headerMenuToggle = document.querySelector('.site-header-menu-toggle');
+    const headerMenu = document.querySelector('#site-header-menu');
 
     headerMenuToggle.addEventListener('click', function () {
         const isMenuVisible = headerMenu.hasAttribute('data-visible');
