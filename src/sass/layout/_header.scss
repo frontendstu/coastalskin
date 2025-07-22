@@ -7,3 +7,11 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.site-header {
+    @include mixin.position($type: fixed, $top: 0, $left: 0);
+
+    width: 100%;
+    z-index: 999;
+    transition: transform 200ms ease-in-out;
+}
