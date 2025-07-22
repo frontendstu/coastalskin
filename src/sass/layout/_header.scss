@@ -14,6 +14,7 @@
     width: 100%;
     z-index: 999;
     transition: transform 200ms ease-in-out;
+    border-bottom: 1px solid hsl(var(--clr-neutral-100) / 0.25);
 
     /* Site Header Wrapper */
     &-wrapper {
@@ -22,7 +23,6 @@
         max-width: 20.625rem;
         margin-inline: auto;
         padding-block: 2rem;
-        border-bottom: 1px solid hsl(var(--clr-neutral-100) / 0.25);
     }
 
     /* Site Header Hidden */
