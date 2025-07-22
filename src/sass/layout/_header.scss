@@ -41,4 +41,27 @@
             opacity: 0.5;
         }
     }
+
+    &-menu {
+        @include mixin.position(
+            $type: absolute,
+            $top: 100%,
+            $right: 0,
+            $left: 0
+        );
+
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        padding: 2rem;
+        background-color: hsl(var(--clr-neutral-900) / 0.75);
+        font: var(--fw-bold) var(--fs-300) var(--ff-pri-bld);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        &[data-visible] {
+            display: flex;
+        }
+    }
 }
