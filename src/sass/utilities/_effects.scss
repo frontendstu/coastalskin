@@ -1,0 +1,12 @@
+/**
+ * EFFECTS
+ *
+ * The effects utility classes are used for visual effects. These classes are 
+ * designed to be composable and reusable across the codebase, allowing for 
+ * consistent styling without tighly coupling effects to specific components.
+ *
+ * Use these classes to enhance UI interactions and visual depth without 
+ * writing repetitive and redundant CSS for common patterns.
+ */
+
+@use '../abstracts/mixins' as mixin;
