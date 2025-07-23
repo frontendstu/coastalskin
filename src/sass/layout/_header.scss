@@ -157,3 +157,12 @@
         }
     }
 }
+
+/* 1280px */
+@media (min-width: 80em) {
+    .site-header {
+        &-wrapper {
+            max-width: 68.75rem;
+        }
+    }
+}
