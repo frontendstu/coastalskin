@@ -60,6 +60,72 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
+ * HEADER SCROLLED
+ * -----------------------------------------------------------------------------
+ *
+ * The header scrolled script is used to control the behaviour of the header
+ * when a page is scrolled. When the page is scrolled down the `.
+ * site-header-scrolled` class will be applied to `<header
+ * class="site-header">`, then when the page is back to it's original position
+ * the `.site-header-scrolled` class will be dynamically removed. The site
+ * header will also hide itself when the page is scrolled down.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const menu = document.querySelector('.site-header-menu');
+    const toggleButton = document.querySelector('.site-header-menu-toggle');
+    let lastScrollY = getScrollPosition();
+    let scrollTimeout;
+    let scrollThreshold = getScrollThreshold();
+
+    function getScrollThreshold() {
+        const width = window.innerWidth;
+        if (width >= 1440) return 50; // 90em+
+        if (width >= 1280) return 40; // 80em+
+        if (width >= 768) return 30; // 48em+
+        return 20; // Below 48em (e.g., iPhone)
+    }
+
+    function getScrollPosition() {
+        return window.scrollY || document.documentElement.scrollTop;
+    }
+
+    const updateHeaderState = () => {
+        const currentScrollY = getScrollPosition();
+        const isScrollingDown = currentScrollY > lastScrollY;
+
+        // console.log(`ScrollY: ${currentScrollY}`); // Debugging
+
+        header.classList.toggle(
+            'site-header-hidden',
+            isScrollingDown && currentScrollY > scrollThreshold
+        );
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            header.classList.toggle(
+                'site-header-menu-scrolled',
+                currentScrollY > scrollThreshold
+            );
+        }, 150);
+
+        // Close menu when scrolling
+        if (menu.classList.contains('site-header-menu-open')) {
+            menu.classList.remove('site-header-menu-open');
+            toggleButton.setAttribute('aria-expanded', 'false');
+        }
+
+        lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    window.addEventListener('resize', () => {
+        scrollThreshold = getScrollThreshold();
+    });
+});
+
+/**
  * SITE BRANDING SWITCH
  * -----------------------------------------------------------------------------
  *
