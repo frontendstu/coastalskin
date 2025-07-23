@@ -155,3 +155,26 @@ document.addEventListener('DOMContentLoaded', function () {
     updateHeaderOnScroll(); // initial check
     window.addEventListener('scroll', updateHeaderOnScroll);
 });
+
+/**
+ * FADE IN EFFECT UTILITY
+ * -----------------------------------------------------------------------------
+ *
+ * The fade in script is used dynamically add the `.fade-in-active` class when
+ * the `.fade-in` class is activated based on scroll position.
+ */
+
+const fadeInElements = document.querySelectorAll('.fade-in');
+const fadeInObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-active');
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+fadeInElements.forEach((element) => fadeInObserver.observe(element));
