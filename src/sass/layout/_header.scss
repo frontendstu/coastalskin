@@ -128,8 +128,11 @@
 /* 768px */
 @media (min-width: 48em) {
     .site-header {
+        border-bottom: none;
+
         &-wrapper {
             max-width: 43rem;
+            border-bottom: 1px solid hsl(var(--clr-neutral-100) / 0.25);
         }
 
         &-menu {
