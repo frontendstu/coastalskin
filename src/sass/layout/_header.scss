@@ -141,12 +141,21 @@
 /* 768px */
 @media (min-width: 48em) {
     .site-header {
-        border-bottom: none;
-
         &-wrapper {
             max-width: 43rem;
             padding-inline: 2rem;
-            border-bottom: 1px solid hsl(var(--clr-neutral-100) / 0.25);
+        }
+    }
+}
+
+/* 1280px */
+@media (min-width: 80em) {
+    .site-header {
+        border-bottom: none;
+
+        &-wrapper {
+            max-width: 68.75rem;
+            border-bottom: 1px solid hsl(var(--clr-neutral-100) / 0.5);
         }
 
         &-menu {
@@ -171,15 +180,6 @@
                 margin-left: auto;
                 font-size: var(--fs-100);
             }
-        }
-    }
-}
-
-/* 1280px */
-@media (min-width: 80em) {
-    .site-header {
-        &-wrapper {
-            max-width: 68.75rem;
         }
     }
 }
