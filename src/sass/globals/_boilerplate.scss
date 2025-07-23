@@ -35,13 +35,11 @@ body {
  */
 
 .heading {
-    color: var(--heading-clr);
     font-weight: var(--heading-fw);
     font-family: var(--heading-ff);
     line-height: var(--heading-leading);
 
     &-alt {
-        color: var(--heading-alt-clr);
         font: var(--heading-alt-font);
         text-transform: var(--heading-alt-case);
         letter-spacing: var(--heading-alt-tracking);
