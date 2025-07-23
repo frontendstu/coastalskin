@@ -5,3 +5,64 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.hero {
+    height: 42rem;
+    display: grid;
+    place-items: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: var(--clr-neutral-100-hsl);
+    text-align: center;
+
+    .heading {
+        margin-top: 1rem;
+        font-size: var(--fs-700);
+        line-height: 1.25;
+
+        &-alt {
+            font-size: var(--fs-100);
+        }
+    }
+
+    .heading,
+    .heading-alt {
+        max-width: 18.75rem;
+        margin-inline: auto;
+    }
+
+    hr {
+        width: 3.25rem;
+        margin-block: 2rem;
+        margin-inline: auto;
+        border-color: hsl(var(--clr-neutral-100) / 0.5);
+    }
+}
+
+/**
+ * HERO MEDIA QUERIES
+ *
+ * Sets the breakpoint styles for the hero 
+ */
+
+/* 768px */
+@media (min-width: 48em) {
+    .hero {
+        .heading,
+        .heading-alt {
+            max-width: 32.5rem;
+        }
+    }
+}
+
+/* 1280px */
+@media (min-width: 80em) {
+    .hero {
+        .heading,
+        .heading-alt {
+            max-width: 61.875rem;
+        }
+    }
+}
