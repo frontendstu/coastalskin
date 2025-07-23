@@ -229,6 +229,8 @@
 
     /* ---------- 1440px */
     @media (min-width: 90em) {
+        --container-max-w: 69.375rem;
+
         --site-header-wrapper-max-w: 69.375rem;
     }
 }
