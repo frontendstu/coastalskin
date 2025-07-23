@@ -169,7 +169,7 @@
     --btn-tracking: 3px;
     --btn-outline-offset: 3px;
 
-    --btn-group-gap: 2rem;
+    --btn-group-gap: 1.5rem;
 
     --btn-solid-clr: var(--clr-neutral-100-hsl);
     --btn-outlined-bg: transparent;
@@ -230,6 +230,8 @@
         --site-header-scrolled-clr: var(--clr-pri-hsl);
         --site-header-scrolled-clr-hover: hsl(var(--clr-pri) / 0.5);
         --site-header-scrolled-outline-clr: var(--clr-pri-hsl);
+
+        --btn-group-gap: 1.625rem;
     }
 
     /* ---------- 1440px */

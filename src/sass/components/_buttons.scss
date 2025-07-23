@@ -50,7 +50,11 @@
 }
 
 .btn-group {
-    @include mixin.flex($gap: var(--btn-group-gap));
+    @include mixin.flex($gap: var(--btn-group-gap), $direction: column);
+
+    @media (min-width: 48em) {
+        flex-direction: row;
+    }
 }
 
 /**
