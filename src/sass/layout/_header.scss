@@ -40,6 +40,11 @@
         @include mixin.hover-focus {
             opacity: 0.5;
         }
+
+        @include mixin.focus {
+            outline-color: var(--clr-neutral-100-hsl);
+            opacity: 1;
+        }
     }
 
     /* Site Header Menu */
