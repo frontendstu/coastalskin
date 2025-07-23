@@ -118,3 +118,42 @@
         }
     }
 }
+
+/**
+ * SITE HEADER MEDIA QUERIES
+ *
+ * Sets the site header styles for the 768px breakpoint
+ */
+
+/* 768px */
+@media (min-width: 48em) {
+    .site-header {
+        &-wrapper {
+            max-width: 43rem;
+        }
+
+        &-menu {
+            @include mixin.position($type: static);
+
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            background-color: transparent;
+
+            &-toggle {
+                display: none;
+            }
+
+            &-items {
+                @include mixin.flex(
+                    $align: flex-end,
+                    $direction: row,
+                    $gap: 2rem
+                );
+
+                margin-left: auto;
+                font-size: var(--fs-100);
+            }
+        }
+    }
+}
