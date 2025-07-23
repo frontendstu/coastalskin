@@ -90,7 +90,8 @@ $btn-theme: (
             $bg: var(--btn-outlined-bg),
             $bg-hover: var(--btn-#{$prefix}),
             $color: var(--btn-#{$prefix}),
-            $color-hover: var(--btn-#{$prefix}-clr)
+            $color-hover: var(--btn-#{$prefix}-clr),
+            $outline-color: var(--btn-#{$prefix})
         );
     }
 }
