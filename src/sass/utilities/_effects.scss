@@ -10,3 +10,21 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * FADE IN
+ *
+ * The `.fade-in` utility class will dynamically reveal content as the page is 
+ * scrolled. The `.fade-in-active` class is dynmically applied via JS. The 
+ * duration of the effect can be altered via the `--fade-in-duration` custom 
+ * property
+ */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in;
+
+    &-active {
+        opacity: 1;
+    }
+}
