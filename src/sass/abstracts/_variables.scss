@@ -117,6 +117,40 @@
     --container-max-w: 21.375rem;
     --container-p: 0.375rem;
 
+    /* Site Header */
+    --site-header-transition: background-color 300ms ease-in-out,
+        transform 1000ms ease-in-out;
+    --site-header-border-b: 1px solid hsl(var(--clr-neutral-100) / 0.25);
+
+    --site-header-wrapper-max-w: 20.625rem;
+    --site-header-wrapper-py: 2rem;
+
+    --site-header-branding-w: 9rem;
+    --site-header-branding-transition: opacity 200ms ease-in-out;
+    --site-header-branding-opacity-hover: 0.5;
+    --site-header-branding-outline-clr: var(--clr-neutral-100-hsl);
+
+    --site-header-menu-p: 2rem;
+    --site-header-menu-bg: hsl(var(--clr-neutral-900) / 0.75);
+    --site-header-menu-font: var(--fw-bold) var(--fs-300) var(--ff-pri-bld);
+    --site-header-menu-case: uppercase;
+    --site-header-menu-tracking: 4px;
+    --site-header-menu-toggle-btn-clr: var(--clr-neutral-100-hsl);
+    --site-header-menu-items-gap: 1.5rem;
+    --site-header-menu-items-clr: var(--clr-neutral-100-hsl);
+    --site-header-menu-items-clr-hover: hsl(var(--clr-neutral-100) / 0.5);
+    --site-header-menu-items-outline-clr: var(
+        --site-header-menu-items-clr-hover
+    );
+
+    --site-header-scrolled-shadow: 0 25px 50px -12px hsl(var(--clr-neutral-900) /
+                0.25);
+    --site-header-scrolled-bg: hsl(var(--clr-neutral-100) / 0.75);
+    --site-header-scrolled-backdrop: blur(10px);
+    --site-header-scrolled-clr: var(--clr-neutral-100-hsl);
+    --site-header-scrolled-clr-hover: hsl(var(--clr-pri) / 0.5);
+    --site-header-scrolled-toggle-btn-clr: var(--clr-pri-hsl);
+
     /* ---------- COMPONENTS */
 
     /* Buttons */
@@ -172,11 +206,29 @@
 
         --container-max-w: 43.125rem;
         --container-p: 0.5rem;
+
+        --site-header-wrapper-max-w: 43rem;
+        --site-header-wrapper-px: 2rem;
     }
 
     /* ---------- 1280px */
     @media (min-width: 80em) {
         --container-max-w: 55.875rem;
         --container-p: 0.75rem;
+
+        --site-header-wrapper-max-w: 68.75rem;
+        --site-header-wrapper-border-b: var(--site-header-border-b);
+        --site-header-menu-p: 0;
+        --site-header-menu-bg: transparent;
+        --site-header-menu-items-gap: 2rem;
+        --site-header-menu-items-fs: var(--fs-100);
+        --site-header-scrolled-clr: var(--clr-pri-hsl);
+        --site-header-scrolled-clr-hover: hsl(var(--clr-pri) / 0.5);
+        --site-header-scrolled-outline-clr: var(--clr-pri-hsl);
+    }
+
+    /* ---------- 1440px */
+    @media (min-width: 90em) {
+        --site-header-wrapper-max-w: 69.375rem;
     }
 }
