@@ -43,6 +43,8 @@ body {
     &-alt {
         color: var(--heading-alt-clr);
         font: var(--heading-alt-font);
+        text-transform: var(--heading-alt-case);
+        letter-spacing: var(--heading-alt-tracking);
     }
 }
 
