@@ -195,6 +195,16 @@
     --btn-ondark-clr: var(--clr-pri-hsl);
     --btn-ondark-outlined: transparent;
 
+    /* Hero */
+    --hero-height: 42rem;
+    --hero-clr: var(--clr-neutral-100-hsl);
+    --hero-heading-max-w: 18.75rem;
+    --hero-heading-fs: var(--fs-700);
+    --hero-heading-alt-fs: var(--fs-100);
+    --hero-hr-width: 3.25rem;
+    --hero-hr-my: 2rem;
+    --hero-hr-border-clr: hsl(var(--clr-neutral-100) / 0.5);
+
     /* ---------- UTILITIES */
 
     --fade-in-duration: 600ms;
@@ -215,6 +225,8 @@
 
         --site-header-wrapper-max-w: 43rem;
         --site-header-wrapper-px: 2rem;
+
+        --hero-heading-max-w: 32.5rem;
     }
 
     /* ---------- 1280px */
@@ -235,6 +247,8 @@
         --site-header-scrolled-outline-clr: var(--clr-pri-hsl);
 
         --btn-group-gap: 1.625rem;
+
+        --hero-heading-max-w: 61.875rem;
     }
 
     /* ---------- 1440px */
