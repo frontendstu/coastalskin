@@ -9,25 +9,25 @@
 @use '../abstracts/mixins' as mixin;
 
 .block {
-    @include mixin.flex($direction: column, $gap: 2.25rem);
+    @include mixin.flex($direction: column, $gap: var(--block-gap));
 
-    max-width: 20.375rem;
-    padding-block: 6rem;
+    max-width: var(--block-max-w);
+    padding-block: var(--block-py);
     margin-inline: auto;
 
     &-content {
         display: flex;
         flex-direction: column;
-        gap: 1.25rem;
-        text-align: center;
+        gap: var(--block-content-gap);
+        text-align: var(--block-content-text-align);
 
         .heading-alt {
-            color: var(--clr-neutral-500-hsl);
+            color: var(--block-heading-alt-clr);
         }
 
         .heading {
-            color: var(--clr-pri-hsl);
-            font-size: var(--fs-500);
+            color: var(--block-heading-clr);
+            font-size: var(--block-heading-fs);
             line-height: 1.5;
         }
 
@@ -39,11 +39,7 @@
 
 @media (min-width: 48em) {
     .block {
-        max-width: 34.75rem;
-
         &-content {
-            text-align: left;
-
             .btn {
                 margin-inline: unset;
             }
@@ -53,7 +49,6 @@
 
 @media (min-width: 80em) {
     .block {
-        max-width: 67.875rem;
         flex-direction: row;
 
         &-alt {

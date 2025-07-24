@@ -204,6 +204,16 @@
     --hero-hr-my: 2rem;
     --hero-hr-border-clr: hsl(var(--clr-neutral-100) / 0.5);
 
+    /* Blocks */
+    --block-gap: 2.25rem;
+    --block-max-w: 20.375rem;
+    --block-py: 6rem;
+    --block-heading-clr: var(--clr-pri-hsl);
+    --block-heading-fs: var(--fs-500);
+    --block-heading-alt-clr: var(--clr-neutral-500-hsl);
+    --block-content-gap: 1.25rem;
+    --block-content-text-align: center;
+
     /* ---------- UTILITIES */
 
     --fade-in-duration: 600ms;
@@ -228,6 +238,9 @@
 
         --hero-h: 40.875rem;
         --hero-heading-max-w: 32.5rem;
+
+        --block-max-w: 34.75rem;
+        --block-content-text-align: left;
     }
 
     /* ---------- 1280px */
@@ -251,6 +264,8 @@
 
         --hero-h: 55rem;
         --hero-heading-max-w: 61.875rem;
+
+        --block-max-w: 67.875rem;
     }
 
     /* ---------- 1440px */
