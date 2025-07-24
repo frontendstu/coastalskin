@@ -7,3 +7,58 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.block {
+    @include mixin.flex($direction: column, $gap: 2.25rem);
+
+    max-width: 20.375rem;
+    padding-block: 6rem;
+    margin-inline: auto;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+
+        .heading-alt {
+            color: var(--clr-neutral-500-hsl);
+        }
+
+        .heading {
+            color: var(--clr-pri-hsl);
+            font-size: var(--fs-500);
+            line-height: 1.5;
+        }
+    }
+
+    &-alt {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 48em) {
+    .block {
+        max-width: 34.75rem;
+
+        &-content {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: 80em) {
+    .block {
+        max-width: 67.875rem;
+        flex-direction: row;
+
+        &-alt {
+            flex-direction: row-reverse;
+        }
+
+        &-content,
+        &-img {
+            width: 50%;
+        }
+    }
+}
