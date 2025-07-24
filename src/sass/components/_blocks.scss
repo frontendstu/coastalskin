@@ -1,0 +1,9 @@
+/**
+ * BLOCKS
+ *
+ * The blocks partial defines the styles of the `.block` styles along with the 
+ * alternate block styles (`.block-alt`) which reverses the layout of the block 
+ * from the `.block` styles and applies a light grey background colour.
+ */
+
+@use '../abstracts/mixins' as mixin;
