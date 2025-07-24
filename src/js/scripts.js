@@ -178,3 +178,27 @@ const fadeInObserver = new IntersectionObserver(
 );
 
 fadeInElements.forEach((element) => fadeInObserver.observe(element));
+
+/**
+ * PARALLAX EFFECT UTILITY
+ * -----------------------------------------------------------------------------
+ *
+ * The parallax script is used to create a parallax effect on scroll when the
+ * .parallax class is added to an element. Note the parallax effect has been
+ * disabled on mobile devices.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const parallax = document.querySelector('.parallax');
+
+    function updateParallax() {
+        if (window.matchMedia('(min-width: 40em)').matches) {
+            const scrollY = window.scrollY;
+            parallax.style.backgroundPosition = `center ${scrollY * 0.3}px`;
+        } else {
+            parallax.style.backgroundPosition = ''; // Reset on small screens
+        }
+    }
+
+    window.addEventListener('scroll', updateParallax, { passive: true });
+});
