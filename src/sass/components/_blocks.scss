@@ -31,10 +31,6 @@
             line-height: 1.5;
         }
     }
-
-    &-alt {
-        flex-direction: column-reverse;
-    }
 }
 
 @media (min-width: 48em) {
@@ -54,6 +50,10 @@
 
         &-alt {
             flex-direction: row-reverse;
+        }
+
+        &-img img {
+            margin-left: auto;
         }
 
         &-content,
