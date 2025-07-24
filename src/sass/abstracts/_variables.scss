@@ -147,6 +147,7 @@
     --site-header-scrolled-clr: var(--clr-neutral-100-hsl);
     --site-header-scrolled-clr-hover: hsl(var(--clr-pri) / 0.5);
     --site-header-scrolled-toggle-btn-clr: var(--clr-pri-hsl);
+    --site-header-scrolled-outline-clr: var(--link-outline-clr);
 
     /* ---------- COMPONENTS */
 
@@ -244,7 +245,6 @@
         --site-header-menu-items-fs: var(--fs-100);
         --site-header-scrolled-clr: var(--clr-pri-hsl);
         --site-header-scrolled-clr-hover: hsl(var(--clr-pri) / 0.5);
-        --site-header-scrolled-outline-clr: var(--clr-pri-hsl);
 
         --btn-group-gap: 1.625rem;
 

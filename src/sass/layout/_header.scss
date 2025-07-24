@@ -119,6 +119,10 @@
                 @include mixin.hover-focus {
                     color: var(--site-header-scrolled-clr-hover);
                 }
+
+                @include mixin.focus {
+                    outline-color: var(--site-header-scrolled-outline-clr);
+                }
             }
 
             svg {
