@@ -42,6 +42,26 @@
 }
 
 /**
+ * Hero Overlay
+ *
+ * The hero overlay styles apply a background overlay to the hero.
+ */
+
+// Loop through each branding colour and apply it to the hero overlay's
+// respective class.
+$hero-overlays: (
+    primary: 'pri',
+    secondary: 'sec',
+    accent: 'acnt',
+);
+
+@each $name, $prefix in $hero-overlays {
+    .hero-overlay-#{$name} {
+        background-color: var(--clr-#{$prefix}-hsl);
+    }
+}
+
+/**
  * HERO MEDIA QUERIES
  *
  * Sets the breakpoint styles for the hero 
