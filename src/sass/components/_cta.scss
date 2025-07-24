@@ -7,25 +7,25 @@
 @use '../abstracts/mixins' as mixin;
 
 .cta {
-    padding-block: 4.125rem;
+    padding-block: var(--cta-py);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    color: var(--clr-neutral-100-hsl);
-    text-align: center;
+    color: var(--cta-clr);
+    text-align: var(--cta-text-align);
 
     .container {
-        @include mixin.flex($gap: 2rem, $direction: column);
+        @include mixin.flex($gap: var(--cta-container-gap), $direction: column);
     }
 
     .heading-alt {
-        font-size: var(--fs-100);
+        font-size: var(--cta-heading-alt-fs);
     }
 
     .heading {
-        max-width: 12rem;
-        margin: 2rem auto 0;
-        font-size: var(--fs-700);
+        max-width: var(--cta-heading-max-w);
+        margin: var(--cta-heading-m);
+        font-size: var(--cta-heading-fs);
     }
 
     .btn {
@@ -48,9 +48,7 @@ $cta-overlay-theme: (
 
 @media (min-width: 48em) {
     .cta {
-        padding-block: 10.5rem;
         background-position: top center;
-        text-align: left;
 
         .container {
             flex-direction: row;
@@ -64,11 +62,6 @@ $cta-overlay-theme: (
 
 @media (min-width: 80em) {
     .cta {
-        padding-block: 8.75rem;
         background-position-y: -10rem;
-
-        .heading {
-            max-width: 30rem;
-        }
     }
 }

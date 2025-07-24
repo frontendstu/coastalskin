@@ -214,6 +214,16 @@
     --block-content-gap: 1.25rem;
     --block-content-text-align: center;
 
+    /* Call to Action */
+    --cta-py: 4.125rem;
+    --cta-clr: var(--clr-neutral-100-hsl);
+    --cta-text-align: center;
+    --cta-heading-max-w: 12rem;
+    --cta-heading-m: 2rem auto 0;
+    --cta-heading-fs: var(--fs-700);
+    --cta-heading-alt-fs: var(--fs-100);
+    --cta-container-gap: 2rem;
+
     /* ---------- UTILITIES */
 
     --fade-in-duration: 600ms;
@@ -241,6 +251,9 @@
 
         --block-max-w: 34.75rem;
         --block-content-text-align: left;
+
+        --cta-py: 10.5rem;
+        --cta-text-align: left;
     }
 
     /* ---------- 1280px */
@@ -266,6 +279,9 @@
         --hero-heading-max-w: 61.875rem;
 
         --block-max-w: 67.875rem;
+
+        --cta-py: 8.75rem;
+        --cta-heading-max-w: 30rem;
     }
 
     /* ---------- 1440px */
