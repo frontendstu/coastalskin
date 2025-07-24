@@ -1,3 +1,60 @@
 /**
  * COLORS
  */
+
+$colors: (
+    primary: 'pri',
+    secondary: 'sec',
+    accent: 'acnt',
+);
+
+$neutral-prefix: 'neutral';
+$neutral-map: ();
+
+// -----------------------------------------------------------------------------
+// Generate Neutral Colors Dynamically
+//
+// This loop builds a Sass map for the neutral color custom props in increments
+// of 100, from --clr-neutral-100 through --clr-neutral-900.
+//
+// For each step (i.e., 100-900), it adds a new map entry like:
+// 'neutral-100' : 'neutral-100
+//
+// These custom props are later merged into the main $colors map and used to
+// generate utility classes like `.text-neutral-100`, `.bg-neutral-300`, etc.
+//
+// The `@if $i % 100 == 0` condition ensures only multiples of 100 are
+// included, avoiding unnecessary value between steps.
+// -----------------------------------------------------------------------------
+
+@for $i from 100 through 900 {
+    @if $i % 100 == 0 {
+        $neutral-map: map-merge(
+            $neutral-map,
+            (#{$neutral-prefix}-#{$i}: '#{$neutral-prefix}-#{$i}')
+        );
+    }
+}
+
+// Merge into full color map
+$color: map-merge($colors, $neutral-map);
+
+/**
+ * Text Color Utility Classes
+ */
+
+@each $name, $prefix in $color {
+    .text-#{$name} {
+        color: var(--clr-#{$prefix}-hsl);
+    }
+}
+
+/**
+ * Background Color Utility Classes
+ */
+
+@each $name, $prefix in $color {
+    .bg-#{$name} {
+        background-color: var(--clr-#{$prefix}-hsl);
+    }
+}
