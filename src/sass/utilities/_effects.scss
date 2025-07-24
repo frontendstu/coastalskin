@@ -28,3 +28,22 @@
         opacity: 1;
     }
 }
+
+/**
+ * PARALLAX
+ *
+ * The `.parallax` utility class will add a parallax effect to the background 
+ * image of an element. The parallax effect is a pretty effect that adds depth 
+ * to the site.
+ *
+ * NOTE: The `.parallax` has been disabled on devices less than 640px.
+ */
+
+.parallax {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+    transform: translateY(0);
+    will-change: background-position;
+}
