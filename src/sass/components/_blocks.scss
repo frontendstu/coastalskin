@@ -30,6 +30,10 @@
             font-size: var(--fs-500);
             line-height: 1.5;
         }
+
+        .btn {
+            margin-inline: auto;
+        }
     }
 }
 
@@ -39,6 +43,10 @@
 
         &-content {
             text-align: left;
+
+            .btn {
+                margin-inline: unset;
+            }
         }
     }
 }
