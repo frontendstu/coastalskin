@@ -214,6 +214,7 @@
     /* ---------- 768px */
     @media (min-width: 48em) {
         --fs-100: 0.875rem;
+        --fs-500: 1.625rem;
         --fs-700: 2rem;
 
         --copy-fs: var(--fs-300);
@@ -229,6 +230,7 @@
 
     /* ---------- 1280px */
     @media (min-width: 80em) {
+        --fs-500: 2rem;
         --fs-700: 4rem;
 
         --container-max-w: 55.875rem;
