@@ -5,3 +5,70 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.cta {
+    padding-block: 4.125rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    color: var(--clr-neutral-100-hsl);
+    text-align: center;
+
+    .container {
+        @include mixin.flex($gap: 2rem, $direction: column);
+    }
+
+    .heading-alt {
+        font-size: var(--fs-100);
+    }
+
+    .heading {
+        max-width: 12rem;
+        margin: 2rem auto 0;
+        font-size: var(--fs-700);
+    }
+
+    .btn {
+        margin-inline: auto;
+    }
+}
+
+// Loop through each branding colour and return the call to action overlay theme
+$cta-overlay-theme: (
+    primary: 'pri',
+    secondary: 'sec',
+    accent: 'acnt',
+);
+
+@each $name, $prefix in $cta-overlay-theme {
+    .cta-overlay-#{$name} {
+        background-color: var(--clr-#{$prefix}-hsl);
+    }
+}
+
+@media (min-width: 48em) {
+    .cta {
+        padding-block: 10.5rem;
+        background-position: top center;
+        text-align: left;
+
+        .container {
+            flex-direction: row;
+        }
+
+        .btn {
+            margin-inline: auto 0;
+        }
+    }
+}
+
+@media (min-width: 80em) {
+    .cta {
+        padding-block: 8.75rem;
+        background-position-y: -10rem;
+
+        .heading {
+            max-width: 30rem;
+        }
+    }
+}
