@@ -2,6 +2,8 @@
  * COLORS
  */
 
+@use 'sass:map';
+
 $colors: (
     primary: 'pri',
     secondary: 'sec',
@@ -29,7 +31,7 @@ $neutral-map: ();
 
 @for $i from 100 through 900 {
     @if $i % 100 == 0 {
-        $neutral-map: map-merge(
+        $neutral-map: map.merge(
             $neutral-map,
             (#{$neutral-prefix}-#{$i}: '#{$neutral-prefix}-#{$i}')
         );
@@ -37,7 +39,7 @@ $neutral-map: ();
 }
 
 // Merge into full color map
-$color: map-merge($colors, $neutral-map);
+$color: map.merge($colors, $neutral-map);
 
 /**
  * Text Color Utility Classes
