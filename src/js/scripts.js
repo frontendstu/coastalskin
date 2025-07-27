@@ -202,3 +202,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateParallax, { passive: true });
 });
+
+/**
+ * MODAL
+ * -----------------------------------------------------------------------------
+ */
+
+const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+const modals = document.querySelectorAll('[data-modal]');
+
+modalTriggers.forEach((trigger) => {
+    const targetId = trigger.getAttribute('data-modal-trigger');
+    const targetModal = document.getElementById(targetId);
+
+    if (!targetModal) return;
+
+    trigger.addEventListener('click', () => {
+        targetModal.classList.remove('modal-hide');
+        targetModal.style.display = 'flex'; // ✅ Reset inline style every open
+        requestAnimationFrame(() => {
+            targetModal.classList.add('modal-show');
+        });
+    });
+});
+
+function closeModal(modal) {
+    modal.classList.remove('modal-show');
+    modal.classList.add('modal-hide');
+
+    // Wait for the content animation to finish before hiding overlay
+    setTimeout(() => {
+        modal.style.display = 'none';
+        modal.classList.remove('modal-hide');
+    }, 300); // Matches the CSS transition time
+}
+
+modals.forEach((modal) => {
+    const closeBtn = modal.querySelector('.modal-close');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeModal(modal));
+    }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal(modal);
+        }
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        modals.forEach((modal) => {
+            if (modal.classList.contains('modal-show')) {
+                closeModal(modal);
+            }
+        });
+    }
+});
