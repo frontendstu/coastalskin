@@ -1,3 +1,13 @@
 /**
  * TEXT
  */
+
+/* Text Align */
+$text-align: (left, center, right, justify, nowrap);
+
+// Loop through each item from the `$text-align` variable map
+@each $align in $text-align {
+    .text-#{$align} {
+        text-align: #{$align};
+    }
+}
