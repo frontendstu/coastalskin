@@ -224,6 +224,21 @@
     --cta-heading-alt-fs: var(--fs-100);
     --cta-container-gap: 2rem;
 
+    /* Modal */
+    --modal-bg: hsl(var(--clr-neutral-900) / 0.75);
+
+    --modal-content-bg: var(--clr-neutral-100-hsl);
+    --modal-content-p: 2rem 0 0;
+    --modal-content-radius: 8px;
+    --modal-content-max-w: 43.75rem;
+    --modal-content-size: 90%; /* Width and Height */
+    --modal-content-clr: var(var(--copy-clr));
+    --modal-content-fs: 1.5rem;
+    --modal-content-transition: transform 600ms ease, opacity 600ms ease;
+
+    --modal-close-btn-transition: opacity 300ms ease-in-out;
+    --modal-close-btn-clr: var(--clr-pri-hsl);
+
     /* ---------- UTILITIES */
 
     --fade-in-duration: 600ms;
@@ -282,6 +297,8 @@
 
         --cta-py: 8.75rem;
         --cta-heading-max-w: 30rem;
+
+        --modal-content-p: 2rem 1rem 0;
     }
 
     /* ---------- 1440px */

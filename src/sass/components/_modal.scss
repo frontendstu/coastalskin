@@ -10,7 +10,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: hsl(var(--clr-neutral-900) / 0.75);
+    background: var(--modal-bg);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -20,17 +20,20 @@
     }
 
     &-content {
-        background: var(--clr-neutral-100-hsl);
-        padding: 2rem 0 0;
-        border-radius: 0.5rem;
-        max-width: 43.75rem;
-        width: 90%;
-        height: 90%;
+        @include mixin.size(
+            $width: var(--modal-content-size),
+            $height: var(--modal-content-size)
+        );
+
+        background: var(--modal-content-bg);
+        padding: var(--modal-content-p);
+        border-radius: var(--modal-content-radius);
+        max-width: var(--modal-content-max-w);
         position: relative;
-        color: var(--copy-clr);
+        color: var(--modal-content-clr);
         transform: translateY(-3.125rem);
         opacity: 0;
-        transition: transform 600ms ease, opacity 600ms ease;
+        transition: var(--modal-content-transition);
 
         iframe {
             width: 100%;
@@ -51,23 +54,15 @@
     &-close {
         @include mixin.position($type: absolute, $top: 0.5rem, $right: 1rem);
 
-        transition: opacity 300ms ease-in-out;
+        transition: var(--modal-close-transition);
         background: none;
         border: none;
-        color: var(--clr-pri-hsl);
-        font-size: 1.5rem;
+        color: var(--modal-close-btn-clr);
+        font-size: var(--modal-content-fs);
         cursor: pointer;
 
         @include mixin.hover-focus {
             opacity: 0.5;
-        }
-    }
-}
-
-@media (min-width: 80em) {
-    .modal {
-        &-content {
-            padding-inline: 2rem;
         }
     }
 }
