@@ -42,7 +42,7 @@ $cta-overlay-theme: (
 
 @each $name, $prefix in $cta-overlay-theme {
     .cta-overlay-#{$name} {
-        background-color: var(--clr-#{$prefix}-hsl);
+        background-color: hsl(var(--clr-#{$prefix}) / 0.75);
     }
 }
 
