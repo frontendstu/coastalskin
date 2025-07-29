@@ -28,6 +28,7 @@
         background: var(--modal-content-bg);
         padding: var(--modal-content-p);
         border-radius: var(--modal-content-radius);
+        overflow: hidden;
         max-width: var(--modal-content-max-w);
         position: relative;
         color: var(--modal-content-clr);
