@@ -6,3 +6,48 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * Featured Treatments
+ *
+ * The featured treatment section will take three random categories and output 
+ * them to the `.featured-treatments`
+ */
+
+.featured-treatments {
+    @include mixin.flex(
+        $direction: column,
+        $gap: var(--featured-treatments-gap)
+    );
+
+    padding-block: var(--featured-treatments-py);
+    text-align: var(--featured-treatments-text-align);
+
+    img {
+        transform: translateY(0);
+        transition: var(--featured-treatments-img-transition);
+        border-radius: var(--featured-treatments-img-radius);
+
+        @include mixin.hover {
+            transform: translateY(-0.5rem);
+            opacity: var(--featured-treatments-img-opacity-hover);
+        }
+    }
+
+    .heading {
+        margin-block: var(--featured-treatments-heading-my);
+        color: var(--featured-treatments-heading-clr);
+        font-size: var(--featured-treatments-heading-fs);
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
+    a {
+        text-transform: var(--featured-treatments-link-case);
+        letter-spacing: var(--featured-treatments-link-tracking);
+    }
+
+    @media (min-width: 48em) {
+        flex-direction: row;
+    }
+}

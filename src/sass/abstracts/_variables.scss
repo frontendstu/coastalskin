@@ -243,6 +243,22 @@
 
     --fade-in-duration: 600ms;
 
+    /* ---------- PAGES */
+
+    /* Home */
+    --featured-treatments-gap: 1.5rem;
+    --featured-treatments-py: 2rem;
+    --featured-treatments-text-align: center;
+    --featured-treatments-img-transition: transform 200ms ease-in-out,
+        opacity 300ms ease-in-out;
+    --featured-treatments-img-radius: 14px;
+    --featured-treatments-img-opacity-hover: 0.5;
+    --featured-treatments-heading-my: 1rem;
+    --featured-treatments-heading-clr: var(--clr-pri-hsl);
+    --featured-treatments-heading-fs: var(--fs-400);
+    --featured-treatments-link-case: uppercase;
+    --featured-treatments-link-tracking: 4px;
+
     /* -------------------------------------------------------------------------
      * MEDIA QUERIES
      * ---------------------------------------------------------------------- */
