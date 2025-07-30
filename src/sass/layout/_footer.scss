@@ -6,3 +6,116 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.site-footer {
+    padding-block: 4.375rem;
+    background-color: hsl(var(--clr-neutral-300) / 0.25);
+    font-size: var(--fs-200);
+    text-align: center;
+
+    hr {
+        margin-block: 2rem;
+        border-color: var(--clr-neutral-300-hsl);
+    }
+
+    .container {
+        @include mixin.flex($direction: column, $gap: 2rem);
+    }
+
+    .heading {
+        color: var(--clr-pri-hsl);
+        font-size: var(--fs-400);
+        text-transform: capitalize;
+    }
+
+    &-branding {
+        max-width: 15rem;
+
+        img {
+            width: 8.25rem;
+            margin-inline: auto;
+        }
+
+        p {
+            margin-top: 1.5rem;
+            color: hsl(var(--clr-neutral-500) / 0.8);
+            letter-spacing: 2px;
+        }
+    }
+
+    &-socials {
+        margin-block: 1.5rem;
+
+        nav {
+            @include mixin.flex($direction: row, $gap: 1.5rem);
+
+            a {
+                fill: var(--clr-pri-hsl);
+                transition: fill 300ms ease-in-out;
+
+                @include mixin.hover-focus {
+                    fill: var(--clr-sec-hsl);
+                }
+            }
+        }
+    }
+
+    &-links {
+        nav {
+            @include mixin.flex($direction: column, $gap: 0.25rem);
+
+            margin-top: 1.5rem;
+            text-transform: capitalize;
+        }
+    }
+
+    &-contacts {
+        margin-top: 1.5rem;
+
+        address {
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            @include mixin.flex($direction: column, $gap: 1rem);
+
+            margin-top: 1rem;
+        }
+    }
+
+    &-closing {
+        font-size: 0.75rem;
+
+        nav {
+            @include mixin.flex($direction: row, $gap: 1rem);
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: var(--fw-bold);
+            font-family: var(--ff-pri-bld);
+        }
+    }
+
+    &-attribution {
+        margin-block: 1.5rem 0.5rem;
+    }
+}
+
+/**
+ * Media Queries
+ */
+
+/* 768px */
+@media (min-width: 48em) {
+    .site-footer {
+        &-grid {
+            width: 30rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &-contacts {
+            margin-top: 0;
+        }
+    }
+}
