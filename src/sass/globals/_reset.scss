@@ -13,6 +13,7 @@
  * - Media elements (img, video, svg, picture) are block-level and responsive
  * - Removes default list styles from `<ul>` and `<ol>` elements
  * - Removes default button styles from `<button>` element
+ * - Removes default styles from `<hr>`
  *
  * This reset is intentionally lightweight and designed to compliment 
  * boilerplate and component styles without having to introduce heavy-handed 
@@ -57,4 +58,9 @@ button {
     border: none;
     cursor: pointer;
     outline: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid transparent;
 }
