@@ -10,6 +10,7 @@
 .site-footer {
     padding-block: var(--site-footer-py);
     background-color: var(--site-footer-bg);
+    color: var(--site-footer-clr);
     font-size: var(--site-footer-fs);
     text-align: var(--site-footer-text-align);
 
@@ -56,7 +57,7 @@
             );
 
             a {
-                transition: var(--site-footer-socials-transitio);
+                transition: var(--site-footer-socials-transition);
                 fill: var(--site-footer-socials-icn-fill);
 
                 @include mixin.hover-focus {
