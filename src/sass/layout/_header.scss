@@ -98,6 +98,48 @@
             flex-direction: column;
             gap: var(--site-header-menu-items-gap);
 
+            li:has(> ul) {
+                position: relative;
+
+                > ul {
+                    @include mixin.position(
+                        $type: absolute,
+                        $top: 100%,
+                        $left: 0
+                    );
+
+                    min-width: 21rem;
+                    padding-top: 0.75rem;
+                    padding: 1rem 0.75rem;
+                    margin-top: 0;
+                    background-color: hsl(var(--clr-neutral-900) / 0.8);
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(2rem);
+                    transition: opacity 200ms ease, transform 200ms ease,
+                        background-color 200ms ease;
+                    font-size: 14px;
+                    box-shadow: 0 0.125rem 0.25rem
+                            hsl(var(--clr-neutral-900) / 0.1),
+                        0 0.5rem 1rem hsl(var(--clr-neutral-900) / 0.1);
+                }
+
+                li {
+                    transition: all 200ms ease;
+
+                    a {
+                        display: block;
+                        padding: 1rem;
+                        color: var(--clr-neutral-100-hsl);
+                        font-size: 12px;
+
+                        @include mixin.hover-focus {
+                            color: hsl(var(--clr-neutral-100) / 0.5);
+                        }
+                    }
+                }
+            }
+
             a {
                 color: var(--site-header-menu-items-clr);
 
@@ -179,6 +221,67 @@
 
                 margin-left: auto;
                 font-size: var(--site-header-menu-items-fs);
+
+                a {
+                    padding: 1rem;
+                }
+
+                li:has(> ul) {
+                    position: relative;
+
+                    > ul {
+                        @include mixin.position(
+                            $type: absolute,
+                            $top: 2.25rem,
+                            $left: 0
+                        );
+
+                        min-width: 22rem;
+                        padding-top: 0.75rem;
+                        padding: 1rem 0.75rem;
+                        margin-top: 0;
+                        background-color: hsl(var(--clr-neutral-900) / 0.9);
+                        transition: opacity 200ms ease, transform 200ms ease,
+                            background-color 200ms ease;
+                        font-size: 14px;
+                        box-shadow: 0 0.125rem 0.25rem
+                                hsl(var(--clr-neutral-900) / 0.1),
+                            0 0.5rem 1rem hsl(var(--clr-neutral-900) / 0.1);
+
+                        /* Starts hidden */
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(2rem);
+
+                        /* Smooth slide and fade */
+                        transition: opacity 300ms ease, transform 300ms ease,
+                            visibility 0ms linear 300ms;
+                    }
+
+                    li {
+                        transition: all 200ms ease;
+
+                        a {
+                            display: block;
+                            padding: 1rem;
+                            color: var(--clr-neutral-100-hsl);
+                            font-size: 12px;
+
+                            @include mixin.hover-focus {
+                                color: hsl(var(--clr-neutral-100) / 0.5);
+                            }
+                        }
+                    }
+
+                    &:hover > ul,
+                    &:focus-within ul {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        transition: opacity 300ms ease, transform 300ms ease,
+                            visibility 0ms;
+                    }
+                }
             }
         }
     }
