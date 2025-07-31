@@ -223,7 +223,7 @@
                 font-size: var(--site-header-menu-items-fs);
 
                 a {
-                    padding: 1rem;
+                    padding-block: var(--site-header-menu-dd-link-py);
                 }
 
                 li:has(> ul) {
@@ -236,17 +236,12 @@
                             $left: 0
                         );
 
-                        min-width: 22rem;
-                        padding-top: 0.75rem;
-                        padding: 1rem 0.75rem;
+                        min-width: var(--site-header-menu-dd-max-w);
+                        padding: var(--site-header-menu-dd-p);
                         margin-top: 0;
-                        background-color: hsl(var(--clr-neutral-900) / 0.9);
-                        transition: opacity 200ms ease, transform 200ms ease,
-                            background-color 200ms ease;
-                        font-size: 14px;
-                        box-shadow: 0 0.125rem 0.25rem
-                                hsl(var(--clr-neutral-900) / 0.1),
-                            0 0.5rem 1rem hsl(var(--clr-neutral-900) / 0.1);
+                        transition: var(--site-header-menu-dd-transition);
+                        box-shadow: var(--site-header-menu-dd-box-shadow);
+                        background-color: var(--site-header-menu-dd-bg);
 
                         /* Starts hidden */
                         opacity: 0;
@@ -254,21 +249,22 @@
                         transform: translateY(2rem);
 
                         /* Smooth slide and fade */
-                        transition: opacity 300ms ease, transform 300ms ease,
-                            visibility 0ms linear 300ms;
+                        transition: var(--site-header-menu-dd-slide-transition);
                     }
 
                     li {
-                        transition: all 200ms ease;
+                        transition: var(--site-header-menu-dd-items-transition);
 
                         a {
                             display: block;
-                            padding: 1rem;
-                            color: var(--clr-neutral-100-hsl);
-                            font-size: 12px;
+                            padding: var(--site-header-menu-dd-items-p);
+                            color: var(--site-header-menu-dd-items-clr);
+                            font-size: var(--site-header-menu-dd-items-fs);
 
                             @include mixin.hover-focus {
-                                color: hsl(var(--clr-neutral-100) / 0.5);
+                                color: var(
+                                    --site-header-menu-dd-items-clr-hover
+                                );
                             }
                         }
                     }

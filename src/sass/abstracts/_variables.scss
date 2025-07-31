@@ -142,6 +142,23 @@
     --site-header-menu-items-clr-hover: hsl(var(--clr-neutral-100) / 0.5);
     --site-header-menu-items-outline-clr: var(--clr-neutral-100-hsl);
 
+    --site-header-menu-dd-link-py: 1rem;
+    --site-header-menu-dd-max-w: 22rem;
+    --site-header-menu-dd-p: 1rem 0.75rem;
+    --site-header-menu-dd-transition: opacity 200ms ease, transform 200ms ease,
+        background-color 200ms ease;
+    --site-header-menu-dd-box-shadow: 0 0.125rem 0.25rem
+            hsl(var(--clr-neutral-900) / 0.1),
+        0 0.5rem 1rem hsl(var(--clr-neutral-900) / 0.1);
+    --site-header-menu-dd-bg: hsl(var(--clr-neutral-900) / 0.9);
+    --site-header-menu-dd-slide-transition: opacity 300ms ease,
+        transform 300ms ease, visibility 0ms linear 300ms;
+    --site-header-menu-dd-items-p: 1rem;
+    --site-header-menu-dd-items-transition: all 200ms ease;
+    --site-header-menu-dd-items-clr: var(--clr-neutral-100-hsl);
+    --site-header-menu-dd-items-clr-hover: hsl(var(--clr-neutral-100) / 0.5);
+    --site-header-menu-dd-items-fs: 0.75rem;
+
     --site-header-scrolled-shadow: 0 25px 50px -12px hsl(var(--clr-neutral-900) /
                 0.25);
     --site-header-scrolled-bg: hsl(var(--clr-neutral-100) / 0.75);
