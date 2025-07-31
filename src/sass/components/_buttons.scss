@@ -103,3 +103,33 @@ $btn-theme: (
         );
     }
 }
+
+/**
+ * -----------------------------------------------------------------------------
+ * Scroll To Top Button
+ * -----------------------------------------------------------------------------
+ *
+ * The styles for the scroll to top button. This button will appear when the 
+ * page is at its dynamic page position. A class of `.btn-scroll-top-visible` 
+ * will be applied via JavaScript.
+ */
+
+.btn-scroll-top {
+    @include mixin.position($type: fixed, $bottom: 2rem, $right: 2rem);
+
+    opacity: 0;
+    padding: 0.5rem;
+    transition: fill 200ms ease-in-out, background-color 200ms ease-in-out,
+        opacity 200ms ease-in-out;
+    z-index: 999;
+    background-color: var(--clr-acnt-hsl);
+    fill: var(--clr-neutral-100-hsl);
+
+    @include mixin.hover {
+        opacity: 0.75;
+    }
+
+    &-visible {
+        opacity: 1;
+    }
+}
