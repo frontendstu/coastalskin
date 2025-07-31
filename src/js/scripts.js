@@ -11,6 +11,37 @@
 console.log('Hello from scripts.js');
 
 /**
+ * SCROLL TO TOP
+ * -----------------------------------------------------------------------------
+ *
+ * This script controls the behaviour of the 'Scroll to Top' button with the
+ * class `scroll-top`.
+ *
+ * It monitors the window's scroll position and toggles the visibility of the
+ * button. When the user scrolls past half of the page height, the button
+ * becomes visible by adding the `btn-scroll-top-visible` class. Then when the
+ * button is tapped, the page smoothly scrolls back to the top of the page.
+ */
+
+const scrollToTopButton = document.querySelector('.btn-scroll-top');
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const pageHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollPosition > pageHeight / 2) {
+        scrollToTopButton.classList.add('btn-scroll-top-visible');
+    } else {
+        scrollToTopButton.classList.remove('btn-scroll-top-visible');
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/**
  * HEADER MENU TOGGLE
  * -----------------------------------------------------------------------------
  *
