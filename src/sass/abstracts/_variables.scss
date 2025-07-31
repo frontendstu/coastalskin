@@ -149,6 +149,44 @@
     --site-header-scrolled-toggle-btn-clr: var(--clr-pri-hsl);
     --site-header-scrolled-outline-clr: var(--link-outline-clr);
 
+    /* Site Footer */
+    --site-footer-py: 4.375rem;
+    --site-footer-spacer: 1.5rem;
+    --site-footer-bg: hsl(var(--clr-neutral-300) / 0.25);
+    --site-footer-fs: var(--fs-200);
+    --site-footer-text-align: center;
+    --site-footer-rule-my: 2rem;
+    --site-footer-rule-border-clr: var(--clr-neutral-300-hsl);
+    --site-footer-container-gap: 2rem;
+
+    --site-footer-heading-clr: var(--clr-pri-hsl);
+    --site-footer-heading-fs: var(--fs-400);
+    --site-footer-heading-case: capitalize;
+
+    --site-footer-branding-max-w: 15rem;
+    --site-footer-branding-img-w: 8.25rem;
+    --site-footer-branding-content-clr: hsl(var(--clr-neutral-500) / 0.8);
+    --site-footer-branding-content-tracking: 2px;
+
+    --site-footer-socials-transition: fill 300ms ease-in-out;
+    --site-footer-socials-icn-fill: var(--clr-pri-hsl);
+    --site-footer-socials-icn-fill-hover: var(--clr-sec-hsl);
+
+    --site-footer-links-gap: 0.5rem;
+    --site-footer-links-case: capitalize;
+
+    --site-footer-contacts-gap: 1rem;
+    --site-footer-contacts-ul-mt: 1rem;
+
+    --site-footer-closing-gap: 1rem;
+    --site-footer-closing-fw: var(--fw-bold);
+    --site-footer-closing-fs: 0.75rem;
+    --site-footer-closing-ff: var(--ff-pri-bld);
+    --site-footer-closing-case: uppercase;
+    --site-footer-closing-tracking: 2px;
+
+    --site-footer-attribution-my: var(--site-footer-spacer) 0.25rem;
+
     /* ---------- COMPONENTS */
 
     /* Buttons */

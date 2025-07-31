@@ -8,53 +8,59 @@
 @use '../abstracts/mixins' as mixin;
 
 .site-footer {
-    padding-block: 4.375rem;
-    background-color: hsl(var(--clr-neutral-300) / 0.25);
-    font-size: var(--fs-200);
-    text-align: center;
+    padding-block: var(--site-footer-py);
+    background-color: var(--site-footer-bg);
+    font-size: var(--site-footer-fs);
+    text-align: var(--site-footer-text-align);
 
     hr {
-        margin-block: 2rem;
-        border-color: var(--clr-neutral-300-hsl);
+        margin-block: var(--site-footer-rule-my);
+        border-color: var(--site-footer-rule-border-clr);
     }
 
     .container {
-        @include mixin.flex($direction: column, $gap: 2rem);
+        @include mixin.flex(
+            $direction: column,
+            $gap: var(--site-footer-container-gap)
+        );
     }
 
     .heading {
-        color: var(--clr-pri-hsl);
-        font-size: var(--fs-400);
-        text-transform: capitalize;
+        color: var(--site-footer-heading-clr);
+        font-size: var(--site-footer-heading-fs);
+        text-transform: var(--site-footer-heading-case);
     }
 
     &-branding {
-        max-width: 15rem;
+        max-width: var(--site-footer-branding-);
 
         img {
-            width: 8.25rem;
+            width: var(--site-footer-branding-img-w);
             margin-inline: auto;
         }
 
         p {
-            margin-top: 1.5rem;
-            color: hsl(var(--clr-neutral-500) / 0.8);
-            letter-spacing: 2px;
+            margin-top: var(--site-footer-spacer);
+            color: var(--site-footer-branding-content-clr);
+            letter-spacing: var(--site-footer-branding-content-tracking);
         }
     }
 
     &-socials {
-        margin-block: 1.5rem;
+        margin-block: var(--site-footer-spacer);
 
         nav {
-            @include mixin.flex($direction: row, $gap: 1.5rem);
+            @include mixin.flex(
+                $direction: row,
+                $gap: var(--site-footer-spacer)
+            );
 
             a {
-                fill: var(--clr-pri-hsl);
-                transition: fill 300ms ease-in-out;
+                transition: var(--site-footer-socials-transitio);
+                fill: var(--site-footer-socials-icn-fill);
 
                 @include mixin.hover-focus {
-                    fill: var(--clr-sec-hsl);
+                    fill: var(--site-footer-socials-icn-fill-hover);
                 }
             }
         }
@@ -62,42 +68,51 @@
 
     &-links {
         nav {
-            @include mixin.flex($direction: column, $gap: 0.25rem);
+            @include mixin.flex(
+                $direction: column,
+                $gap: var(--site-footer-links-gap)
+            );
 
-            margin-top: 1.5rem;
-            text-transform: capitalize;
+            margin-top: var(--site-footer-spacer);
+            text-transform: var(--site-footer-links-case);
         }
     }
 
     &-contacts {
-        margin-top: 1.5rem;
+        margin-top: var(--site-footer-spacer);
 
         address {
-            margin-top: 1.5rem;
+            margin-top: var(--site-footer-spacer);
         }
 
         ul {
-            @include mixin.flex($direction: column, $gap: 1rem);
+            @include mixin.flex(
+                $direction: column,
+                $gap: var(--site-footer-contacts-gap)
+            );
 
-            margin-top: 1rem;
+            margin-top: var(--site-footer-contacts-ul-mt);
         }
     }
 
     &-closing {
-        font-size: 0.75rem;
-
         nav {
-            @include mixin.flex($direction: row, $gap: 1rem);
+            @include mixin.flex(
+                $direction: row,
+                $gap: var(--site-footer-closing-gap)
+            );
 
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: var(--fw-bold);
-            font-family: var(--ff-pri-bld);
+            font-weight: var(--site-footer-closing-fw);
+            font-size: var(--site-footer-closing-fs);
+            font-family: var(--site-footer-closing-fw);
+            text-transform: var(--site-footer-closing-case);
+            letter-spacing: var(--site-footer-closing-tracking);
         }
     }
 
     &-attribution {
-        margin-block: 1.5rem 0.5rem;
+        margin-block: var(--site-footer-spacer);
+        color: var(--clr-neutral-500-hsl);
     }
 }
 
