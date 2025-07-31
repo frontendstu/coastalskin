@@ -1,4 +1,6 @@
+// -----------------------------------------------------------------------------
 // MIXINS
+// -----------------------------------------------------------------------------
 //
 // The mixins partial contains reusable mixins to promote consistency and
 // reduce repetition across the codebase. Mixins encapsulate common patterns
@@ -10,11 +12,11 @@
 
 // -----------------------------------------------------------------------------
 // LINK STATES
+// -----------------------------------------------------------------------------
 //
 // These link state mixins provide reusable patterns for managing link and
 // interactive element states. They encapsulate common pseudo-class
 // combinations to ensure consistent styling and accessibility across the UI.
-// -----------------------------------------------------------------------------
 
 @mixin hover {
     &:hover {
@@ -65,10 +67,10 @@
 
 // -----------------------------------------------------------------------------
 // Screen Reader Only
+// -----------------------------------------------------------------------------
 //
 // Visually hides an element while keeping it accessible to screen readers.
 // Useful for adding hidden text or instructions for asssistive technologies.
-// -----------------------------------------------------------------------------
 
 @mixin sr-only {
     position: absolute;
@@ -84,6 +86,7 @@
 
 // -----------------------------------------------------------------------------
 // FLEXBOX
+// -----------------------------------------------------------------------------
 //
 // The flex mixin provides a shorthand utility for applying common flexbox
 // layout properties in a consistent and readable way. It simplifies the /
@@ -92,7 +95,6 @@
 //
 // This mixin is intended for layout scaffolding and should be used in layout
 // or component partials where flexbox alignment and spacing are required.
-// -----------------------------------------------------------------------------
 
 @mixin flex($align: center, $justify: center, $direction: null, $gap: null) {
     display: flex;
@@ -110,11 +112,11 @@
 
 // -----------------------------------------------------------------------------
 // POSITION
+// -----------------------------------------------------------------------------
 //
 // The position mixin sets the CSS `position` property and optional directional
 // offsets. It includes validation to ensure `$type` is one of the allowed CSS
 // values.
-// -----------------------------------------------------------------------------
 
 @mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
     // Define the list of valid CSS position types
@@ -146,10 +148,10 @@
 
 // -----------------------------------------------------------------------------
 // SIZE
+// -----------------------------------------------------------------------------
 //
 // The size utility mixin allows for applying element dimension.
 // Accepts width, height, max-width, max-height as optional parameters
-// -----------------------------------------------------------------------------
 
 @mixin size($width: null, $height: null, $max-width: null, $max-height: null) {
     @if $width != null {
@@ -171,12 +173,12 @@
 
 // -----------------------------------------------------------------------------
 // FONT FACE
+// -----------------------------------------------------------------------------
 //
 // The font-face mixin simplifies font registration and enforces best practices
 // like `font-display: swap;` for improved performance.
 //
 // The font-face mixin generates a `@font-face` rule for importing custom fonts.
-// -----------------------------------------------------------------------------
 
 @mixin font-face($font-weight, $font-family, $font-uri, $font-style: normal) {
     @font-face {
@@ -190,6 +192,7 @@
 
 // -----------------------------------------------------------------------------
 // BUTTON
+// -----------------------------------------------------------------------------
 //
 // The btn mixin provides a flexible reusable pattern for styling buttons and
 // interactive elements. It supports a range of optional parameters for layout,
@@ -198,7 +201,6 @@
 // The button mixin is designed to apply base styles as well as changes on
 // `:hover` and `:focus-within`, allowing consistent appearance and behaviour
 // across different button types and use cases.
-// -----------------------------------------------------------------------------
 
 @mixin btn(
     $width: fit-content,
@@ -310,11 +312,11 @@
 
 // -----------------------------------------------------------------------------
 // OUTLINE
+// -----------------------------------------------------------------------------
 //
 // The outline mixin creates an extended shorthand of the outline property. The
 // way the outline mixin extends the outline shorthand property is that it
 // allows for `outline-offset` and `border-radius`.
-// -----------------------------------------------------------------------------
 
 @mixin outline(
     $width: null,

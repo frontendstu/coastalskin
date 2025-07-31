@@ -1,5 +1,7 @@
 /**
+ * -----------------------------------------------------------------------------
  * BUTTONS
+ * -----------------------------------------------------------------------------
  *
  * The buttons partial defines the base styles and variant button styles. Each 
  * button has been styled consistently, with clear visual hierarchy and 
@@ -9,7 +11,9 @@
 @use '../abstracts/mixins' as mixin;
 
 /**
+ * -----------------------------------------------------------------------------
  * Button
+ * -----------------------------------------------------------------------------
  *
  * The `.btn` class sets up the global styles for a button. The `.btn` class 
  * must be delcared before a button theme in order to display correctly. 
@@ -33,7 +37,9 @@
 }
 
 /**
+ * -----------------------------------------------------------------------------
  * Button Utility Classes
+ * -----------------------------------------------------------------------------
  *
  * Button utility classes adjust the appearance of a button, for example the `.
  * btn-pill` utility class will make the radius of a button circular giving the 
@@ -58,7 +64,9 @@
 }
 
 /**
+ * -----------------------------------------------------------------------------
  * Button Themes
+ * -----------------------------------------------------------------------------
  *
  * These styles style the theme of a button. This includes the solid and 
  * outlined themes.

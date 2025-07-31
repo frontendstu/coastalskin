@@ -1,9 +1,12 @@
 /**
+ * -----------------------------------------------------------------------------
  * SITE HEADER
+ * -----------------------------------------------------------------------------
  *
  * Styles for the main header, including layout, branding, navigation and 
  * responsive be haviour. Adjusts for desktop and mobile views, ensuring 
  * accessibility and visual consistency across the site.
+ * -----------------------------------------------------------------------------
  */
 
 @use '../abstracts/mixins' as mixin;
@@ -137,9 +140,9 @@
 }
 
 /**
- * SITE HEADER MEDIA QUERIES
- *
- * Sets the site header styles for the 768px breakpoint
+ * -----------------------------------------------------------------------------
+ * MEDIA QUERIES
+ * -----------------------------------------------------------------------------
  */
 
 /* 768px */
