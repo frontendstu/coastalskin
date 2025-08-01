@@ -17,6 +17,10 @@
     padding-block: var(--block-py);
     margin-inline: auto;
 
+    &-img {
+        margin-bottom: auto;
+    }
+
     &-content {
         display: flex;
         flex-direction: column;
