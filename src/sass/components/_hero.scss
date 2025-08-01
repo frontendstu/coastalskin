@@ -41,6 +41,10 @@
         margin-inline: auto;
         border-color: var(--hero-hr-border-clr);
     }
+
+    &-page {
+        height: var(--hero-page-h);
+    }
 }
 
 /**
