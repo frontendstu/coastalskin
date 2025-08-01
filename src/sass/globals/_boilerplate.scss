@@ -88,3 +88,22 @@ a {
 .sr-only {
     @include mixin.sr-only;
 }
+
+/* -----------------------------------------------------------------------------
+ * Text Elements
+ * -----------------------------------------------------------------------------
+ *
+ * Defines base styles for semantic text elements like `<strong>` and `<em>`. 
+ * Applies emphasis through font-weight, font-family (we're using a custom 
+ * font) and font-style. This is to ensure consistent typographic hierarchy and 
+ * accessibility across the site.
+ */
+
+strong {
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-pri-bld);
+}
+
+em {
+    font-style: italic;
+}
