@@ -35,6 +35,10 @@
         margin-inline: auto;
     }
 
+    &-subheadline {
+        max-width: var(--hero-subheadline-max-w);
+    }
+
     hr {
         width: var(--hero-hr-width);
         margin-block: var(--hero-hr-my);
