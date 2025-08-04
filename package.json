@@ -1,20 +1,31 @@
 {
-  "name": "coastalskin",
-  "version": "1.0.0",
-  "description": "A custom WordPress theme for Coastal Skin + Beauty in Goolwa",
-  "homepage": "https://github.com/frontendstu/coastalskin#readme",
-  "bugs": {
-    "url": "https://github.com/frontendstu/coastalskin/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frontendstu/coastalskin.git"
-  },
-  "license": "GPL-2.0-only",
-  "author": "Stu Cowley",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "name": "coastalskin",
+    "version": "1.0.0",
+    "description": "A custom WordPress theme for Coastal Skin + Beauty in Goolwa",
+    "homepage": "https://github.com/frontendstu/coastalskin#readme",
+    "bugs": {
+        "url": "https://github.com/frontendstu/coastalskin/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/frontendstu/coastalskin.git"
+    },
+    "license": "GPL-2.0-only",
+    "author": "Stu Cowley",
+    "type": "commonjs",
+    "main": "index.js",
+    "dependencies": {
+        "autoprefixer": "^10.4.20",
+        "browser-sync": "^3.0.3",
+        "copyfiles": "^2.4.1",
+        "cssnano": "^7.0.6",
+        "glob": "^11.0.3",
+        "npm-run-all": "^4.1.5",
+        "onchange": "^7.1.0",
+        "postcss-cli": "^11.0.0",
+        "sass": "^1.78.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
 }
