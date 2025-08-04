@@ -1,0 +1,20 @@
+{
+  "name": "coastalskin",
+  "version": "1.0.0",
+  "description": "A custom WordPress theme for Coastal Skin + Beauty in Goolwa",
+  "homepage": "https://github.com/frontendstu/coastalskin#readme",
+  "bugs": {
+    "url": "https://github.com/frontendstu/coastalskin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendstu/coastalskin.git"
+  },
+  "license": "GPL-2.0-only",
+  "author": "Stu Cowley",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
