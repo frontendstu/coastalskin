@@ -161,3 +161,78 @@
         grid-auto-flow: $flow;
     }
 }
+
+// =============================================================================
+// Position | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a shorthand position utility mixin for the coastalskin theme
+//
+// The position mixin simplifies setting common positioning patterns include
+// absolute, relative, fixed, or sticky, with optional top, right, bottom, and
+// left offsets. It enhances clarity, and reduces repetition when working with
+// layout-level positioning across components.
+// -----------------------------------------------------------------------------
+// NOTE: Use the position mixin when you need to apply precise element
+// placement without repeating verbose positioning properties. Ideal for
+// overlays, badges, tooltips, etc. The $type param will check to ensure that a
+// valid position type (absolute, relative, etc) is defined, if an invalid
+// position type is added an error will be thrown.
+//
+// Available params:
+// - $type      Position type (e.g. relative, absolute, fixed, sticky)
+// - $top       Top offset (optional)
+// - $right     Right offset (optional)
+// - $bottom    Bottom offset (optional)
+// - $left      Left offset (optional)
+// - $block     Top and bottom offsets (optional)
+// - $inline    Right and left offsets (optional)
+// -----------------------------------------------------------------------------
+// Usage:
+// @include mixin.position($type: absolute, $top: 2rem, $left: 3rem);
+// =============================================================================
+
+@mixin position(
+    $type,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null,
+    $block: null,
+    $inline: null
+) {
+    // Define list of valid position type
+    $valid-types: static, relative, absolute, sticky, fixed;
+
+    // Check if passed $type is valid
+    @if not list.index($valid-types, $type) {
+        @error "Invalid position type '#{$type}'. Must be one of: #{list.join($valid-types, ', ')}.";
+    }
+
+    position: $type;
+
+    @if $top != null {
+        top: $top;
+    }
+
+    @if $right != null {
+        right: $right;
+    }
+
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+
+    @if $left != null {
+        left: $left;
+    }
+
+    @if $block != null {
+        top: $top;
+        bottom: $bottom;
+    }
+
+    @if $inline != null {
+        right: $right;
+        left: $left;
+    }
+}
