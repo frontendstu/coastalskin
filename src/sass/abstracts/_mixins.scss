@@ -53,6 +53,61 @@
 }
 
 // =============================================================================
+// Outline | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a shorthand outline utility mixin for the coastalskin theme
+//
+// The outline mixin ensures accessibility and visually consistent focus
+// indicators for links, buttons, and other interactive components. It is
+// especially useful for maintaining keyboard navigation visibility across
+// modern browsers and custom UI design.
+// -----------------------------------------------------------------------------
+// NOTE: Use the outline mixin when styling interactive elements to preserve
+// accessibility best practices while allowing for custom theme-aligned focus
+// outlines.
+//
+// Available Params
+// - $outline-width:    Defines the width of the outline
+// - $outline-style:    Defines the style of the outline (default: solid)
+// - $outline-color:    Defines the color of the outline
+// - $outline-offset:   Defines the offset of the outline (optional)
+// - $outline-radius:   Defines the border-radius of the outline (optional)
+// -----------------------------------------------------------------------------
+// Usage:
+// @include mixin.outline(
+//      $outline-width: 3px,
+//      $outline-color: magenta,
+//      $outline-offset: 3px,
+//      $outline-radius: 8px
+// );
+// =============================================================================
+
+@mixin outline(
+    $outline-width,
+    $outline-style: solid,
+    $outline-color,
+    $outline-offset: null,
+    $outline-radius: null
+) {
+    outline: $outline-width $outline-style, $outline-color;
+
+    @if $outline-offset != null {
+        outline-offset: $outline-offset;
+    }
+
+    @if $outline-radius != null {
+        border-radius: $outline-radius;
+
+        // Add focus and focus-within to fix issue with border radius not
+        // displaying when element is focused
+        &:focus,
+        &:focus-within {
+            border-radius: $outline-radius;
+        }
+    }
+}
+
+// =============================================================================
 // Flex | v1.0.0
 // -----------------------------------------------------------------------------
 // Provides a shorthand flexbox utility mixin for the coastalskin theme
