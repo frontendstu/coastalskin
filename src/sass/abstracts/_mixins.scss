@@ -8,3 +8,46 @@
 // used patterns. Mixins promote DRY principles and improve maintainability
 // across the codebase.
 // =============================================================================
+
+// =============================================================================
+// Links | v1.0.0
+// -----------------------------------------------------------------------------
+// Defines interaction state mixins for links and interactive elements in the
+// coastalskin theme.
+//
+// These mixins include utility mixins for common pseudo-class states such as
+// `:hover`, `:focus`, `:focus-within`, and their combinations. These mixins
+// streamline the application of consistent state-based styles across
+// components and reduce style duplication.
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin focus {
+    &:focus {
+        @content;
+    }
+}
+
+@mixin focus-within {
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-within {
+    &:hover,
+    &:focus-within {
+        @content;
+    }
+}
