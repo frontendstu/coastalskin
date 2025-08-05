@@ -236,3 +236,63 @@
         left: $left;
     }
 }
+
+// =============================================================================
+// Size | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a shorthand utility mixin for setting element dimensions in the
+// coastalskin theme.
+//
+// The size mixin allows you to quickly define width, height, max-width,
+// min-width min-height and /or max-height properties on an element. It reduces
+// repetitive declarations and promotes consistency across components where
+// explicit sizing is required.
+// -----------------------------------------------------------------------------
+// NOTE: Use the size mixin when defining fixed or constrained dimensions for
+// layout elements, images, buttons, cards, containers, etc. Supports partial
+// use (e.g. only width or max-height).
+//
+// Available params
+// - $width:        Sets the width (optional)
+// - $height:       Sets the height (optional)
+// - $max-width:    Sets the max-width (optional)
+// - $min-width:    Sets the min-width (optional)
+// - $max-height:   Sets the max-height (optional)
+// - $min-height:   Sets the min-width (optional)
+// -----------------------------------------------------------------------------
+// Usage:
+// @include mixin.size($width: 2.5rem, $height: auto);
+// =============================================================================
+
+@mixin size(
+    $width: null,
+    $height: null,
+    $min-width: null,
+    $min-height: null,
+    $max-width: null,
+    $max-height: null
+) {
+    @if $width != null {
+        width: $width;
+    }
+
+    @if $height != null {
+        height: $height;
+    }
+
+    @if $min-width != null {
+        min-width: $min-width;
+    }
+
+    @if $min-height != null {
+        min-height: $min-height;
+    }
+
+    @if $max-width != null {
+        max-width: $max-width;
+    }
+
+    @if $max-height != null {
+        max-height: $max-height;
+    }
+}
