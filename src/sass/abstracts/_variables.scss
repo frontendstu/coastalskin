@@ -1,0 +1,32 @@
+/** 
+* =============================================================================
+ * Variables | v1.0.0
+ * -----------------------------------------------------------------------------
+ * Defines global variables for the coastalskin theme using CSS custom 
+ * properties (:root).
+ *
+ * This file contains the core variables for colors, typography, spacing, 
+ * breakpoints, and other reusable values. Centralising these ensures visual 
+ * consisitency and makes for easy updating of the design system.
+ * -----------------------------------------------------------------------------
+ */
+
+:root {
+    /* == BREAKPOINTS ======================================================= */
+
+    /* -- 768px -- */
+    @media (min-width: 48em) {
+    }
+
+    /* -- 1024px -- */
+    @media (min-width: 64em) {
+    }
+
+    /* -- 1280px -- */
+    @media (min-width: 80em) {
+    }
+
+    /* -- 1440px -- */
+    @media (min-width: 90em) {
+    }
+}
