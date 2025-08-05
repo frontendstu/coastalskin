@@ -100,3 +100,64 @@
         gap: $gap;
     }
 }
+
+// =============================================================================
+// Grid | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a shorthand grid utility mixin for the coastalskin theme.
+//
+// The grid mixin simplifies the setup of grid containers by abstracting common
+// layout properties such as column/row definitions, gap control, alignment,
+// and auto-flow direction. It supports both simple and complex grid structures
+// while improving readability and reducing repetition.
+// -----------------------------------------------------------------------------
+// NOTE: Use the grid mixin when defining layout regions or UI sections that
+// require two-dimension control. Ideal for responsive grids, card layouts, or
+// content blocks that benefit from flexible spatial organisation.
+//
+// Available Params:
+// - $cols      Defines column structure
+// - $rows      Defines row structure
+// - $gap       Space between rows (e.g. 0.25rem)
+// - $justify   Justifies content along the inline axis
+// - $align     Aligns content along the block axis
+// - $flow      Controls grid auto-flow (e.g. row | column | dense | etc.)
+// -----------------------------------------------------------------------------
+// Usage:
+// @include mixin.grid($cols: 2, $rows: 1, $gap: 1rem, $justify: space-between);
+// =============================================================================
+
+@mixin grid(
+    $cols: null,
+    $rows: null,
+    $gap: null,
+    $justify: null,
+    $align: null,
+    $flow: null
+) {
+    display: grid;
+
+    @if $cols != null {
+        grid-template-columns: repeat($cols, minmax(0, 1fr));
+    }
+
+    @if $rows != null {
+        grid-template-rows: repeat($rows, minmax(0, 1fr));
+    }
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $justify != null {
+        justify-content: $justify;
+    }
+
+    @if $align != null {
+        align-items: $align;
+    }
+
+    @if $flow != null {
+        grid-auto-flow: $flow;
+    }
+}
