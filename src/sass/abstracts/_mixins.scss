@@ -351,3 +351,42 @@
         max-height: $max-height;
     }
 }
+
+// =============================================================================
+// Font Face | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a reusable mixin for defining @font-face rules in the coastalskin
+// theme.
+//
+// The font face mixin simplifies the registration of custom fonts by wrapping
+// the @font-face declaration in a configurable and reusable format. It
+// supports specifying the font weight, family name, source URI, and font
+// style, which defaults to normal.
+// -----------------------------------------------------------------------------
+// NOTE: Use this mixin to consistenly load custom fonts across the theme.
+// Recommended for fonts served locally or from a CDN where you control the
+// path.
+//
+// Available params:
+// - $font-weight:  Font wight range of the font (400 700)
+// - $font-family:  Name assigned to the font (used in font-family declarations)
+// - $font-style:   Font style (e.g. normal, italics) (default: normal)
+// - $font-uri:     Path to the font file (e.g. '../fonts/Font.woff2)
+// -----------------------------------------------------------------------------
+// Usage:
+// @include mixin.font-face(
+//     $font-weight: 400 700,
+//     $font-family: 'Cadiz',
+//     $font-uri: 'assets/fonts/cadiz/Cadiz.woff2'
+// );
+// =============================================================================
+
+@mixin font-face($font-weight, $font-family, $font-style: normal, $font-uri) {
+    @font-face {
+        font-weight: $font-weight;
+        font-family: $font-family;
+        font-style: $font-style;
+        font-display: swap;
+        src: url(#{$font-uri});
+    }
+}
