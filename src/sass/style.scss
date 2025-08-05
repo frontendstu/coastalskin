@@ -1,0 +1,24 @@
+// =============================================================================
+// Coastalskin Theme - Main CSS (Sass Partial)
+// -----------------------------------------------------------------------------
+//
+// Project: coastalskin
+// Purpose: Prototype for the coastalskin custom WordPress theme
+// File: style.scss
+// Author: Stu Cowley
+// Version: 1.0.0
+// Created: 04/08/2025
+// -----------------------------------------------------------------------------
+//
+// Summary:
+// This partial defines the core layout and global styles for the coastalskin
+// theme. It is built using Sass to promote modularity, reusability, and
+// maintainability throughout the development of the theme.
+// =============================================================================
+
+@forward 'abstracts';
+@forward 'globals';
+@forward 'layout';
+@forward 'components';
+@forward 'utilities';
+@forward 'pages';
