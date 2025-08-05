@@ -390,3 +390,134 @@
         src: url(#{$font-uri});
     }
 }
+
+// =============================================================================
+// Button | v1.0.0
+// -----------------------------------------------------------------------------
+// Provides a comprehensive button styling mixin for the coastal skin theme
+//
+// The `btn` mixin offers a flexible and configurable approach to styling
+// buttons and interactive elements. It includes support for layout, spacing,
+// color theming hover/focus-within states, border control, typography, and
+// visual feedback through outline styling.
+// -----------------------------------------------------------------------------
+// NOTE: Use this mixin to construct base button or variant (e.g. primary,
+// secondary, ghost, etc). Designed to pair with utility mixins such as
+// `hover-focus-within, or icon alignment helpers.
+//
+// Interactive staes (:hover, :focus-within) are conditionally applied when
+// relevant params are set, ensuring clean output with only required styles.
+// =============================================================================
+
+@mixin button(
+    $width: fit-content,
+    $gap: null,
+    $padding: null,
+    $font-weight: null,
+    $font-size: null,
+    $font-family: null,
+    $tracking: null,
+    $case: null,
+    $radius: null,
+    $border-width: null,
+    $border-style: solid,
+    $border-color: null,
+    $border-color-hover: null,
+    $bg: null,
+    $bg-hover: null,
+    $color: null,
+    $color-hover: null,
+    $outline-width: null,
+    $outline-style: solid,
+    $outline-color: null,
+    $outline-offset: null,
+    $transition: null
+) {
+    @if $padding != null {
+        display: flex;
+        width: $width;
+        gap: $gap;
+        padding: $padding;
+    }
+
+    @if $transition != null {
+        transition: $transition;
+    }
+
+    @if $radius != null {
+        border-radius: $radius;
+    }
+
+    @if $border-width != null or $border-color != null {
+        border: $border-width solid $border-color;
+    }
+
+    @if $bg != null {
+        background-color: $bg;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
+
+    @if $font-weight != null {
+        font-weight: $font-weight;
+    }
+
+    @if $font-size != null {
+        fonts-size: $font-size;
+    }
+
+    @if $font-family != null {
+        font-family: $font-family;
+    }
+
+    @if $tracking != null {
+        letter-spacing: $tracking;
+    }
+
+    @if $case != null {
+        text-transform: $tracking;
+    }
+
+    @if $outline-color != null or $outline-offset != null {
+        &:focus-within {
+            @if $outline-color != null {
+                outline-color: $outline-color;
+            }
+
+            @if $outline-offset != null {
+                outline-offset: $outline-offset;
+            }
+        }
+    }
+
+    @if $radius !=
+        null or
+        $border-color-hover !=
+        null or
+        $bg-hover !=
+        null or
+        $color-hover !=
+        null
+    {
+        &:hover,
+        &:focus-within {
+            @if $radius != null {
+                border-radius: $radius;
+            }
+
+            @if $border-color-hover != null {
+                border-color: $border-color-hover;
+            }
+
+            @if $bg-hover != null {
+                background-color: $bg-hover;
+            }
+
+            @if $color-hover != null {
+                color: $color-hover;
+            }
+        }
+    }
+}
