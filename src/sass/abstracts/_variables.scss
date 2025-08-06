@@ -12,6 +12,43 @@
  */
 
 :root {
+    /* =========================================================================
+       COLOURS
+       -------------------------------------------------------------------------
+       A note on the colour custom properties. You'll see that there are a 
+       duplicate colour custom properties, but the difference is that one group 
+       has a hsl prefix. This is to indicate that the colour values are using 
+       the hsl function, while the colour properties that don't use the hsl 
+       prefix are the raw HSL values that are used when the need of an alpha 
+       value is required, i.e. `hsl(0 0% 100% / 0.5)`.
+       ====================================================================== */
+
+    /* -- Branding -- */
+    --clr-pri: 219 89% 17%;
+    --clr-sec: 216 51% 73%;
+    --clr-acnt: 4 27% 69%;
+
+    /* -- Neutrals -- */
+    --clr-neut-100: 0 0% 100%;
+    --clr-neut-200: 220 27% 98%;
+    --clr-neut-300: 220 36% 84%;
+    --clr-neut-400: 221 17% 67%;
+    --clr-neut-500: 219 18% 43%;
+    --clr-neut-900: 219 88% 12%;
+
+    /* -- Branding (HSL Prefix) -- */
+    --clr-pri-hsl: hsl(219 89% 17%);
+    --clr-sec-hsl: hsl(216 51% 73%);
+    --clr-act-hsl: hsl(4 27% 69%);
+
+    /* -- Neutrals (HSL Prefix) -- */
+    --clr-neut-100: hsl(0 0% 100%);
+    --clr-neut-200: hsl(220 27% 98%);
+    --clr-neut-300: hsl(220 36% 84%);
+    --clr-neut-400: hsl(221 17% 67%);
+    --clr-neut-500: hsl(219 18% 43%);
+    --clr-neut-900: hsl(219 88% 12%);
+
     /* == BREAKPOINTS ======================================================= */
 
     /* -- 768px -- */
