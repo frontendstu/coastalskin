@@ -49,18 +49,53 @@
     --clr-neut-500: hsl(219 18% 43%);
     --clr-neut-900: hsl(219 88% 12%);
 
+    /* == FONTS ======================================================= */
+
+    /* -- Font Weight -- */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* -- Font Sizes -- */
+    --fs-100: 0.75rem; /* 12px */
+    --fs-200: 0.875rem; /* 14px */
+    --fs-300: 1rem; /* 16px */
+    --fs-400: 1.125rem; /* 18px */
+    --fs-500: 1.25rem; /* 20px */
+    --fs-600: 1.75rem; /* 28px */
+    --fs-700: 2.25rem; /* 36px */
+    --fs-800: 3rem; /* 48px */
+    --fs-900: 4rem; /* 64px */
+
+    /* -- Font Family Stacks */
+
+    --ff-sans: sans-serif;
+
+    --ff-cadiz-reg: 'Cadiz Regular', var(--ff-sans);
+    --ff-cadiz-bold: 'Cadiz Bold', var(--ff-sans);
+
+    --ff-ivymode-reg: 'Ivy Mode Regular', var(--ff-sans);
+    --ff-ivymode-bold: 'Ivy Mode Bold', var(--ff-sans);
+
+    --ff-pri: var(--ff-cadiz-reg);
+    --ff-sec: var(--ff-ivymode-bold);
+
     /* == BREAKPOINTS ======================================================= */
 
     /* -- 768px -- */
     @media (min-width: 48em) {
+        /* -- Font Sizes -- */
+        --fs-500: 1.75rem; /* 28px */
+        --fs-600: 2.25rem; /* 36px */
     }
 
     /* -- 1024px -- */
     @media (min-width: 64em) {
+        --fs-600: 3rem; /* 48px */
     }
 
     /* -- 1280px -- */
     @media (min-width: 80em) {
+        --fs-600: 4rem; /* 64px */
     }
 
     /* -- 1440px -- */
