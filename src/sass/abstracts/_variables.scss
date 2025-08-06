@@ -79,6 +79,13 @@
     --ff-pri: var(--ff-cadiz-reg);
     --ff-sec: var(--ff-ivymode-bold);
 
+    /* == TYPOGRAPHY ======================================================== */
+
+    /* -- Leading -- */
+    --leading-tight: 1.2;
+    --leading-base: 1.5;
+    --leading-loose: 1.75;
+
     /* == BREAKPOINTS ======================================================= */
 
     /* -- 768px -- */
