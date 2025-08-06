@@ -86,6 +86,25 @@
     --leading-base: 1.5;
     --leading-loose: 1.75;
 
+    /* == HEADINGS ========================================================== */
+    --heading-eyebrow-fw: var(--fw-bold);
+    --heading-eyebrow-fs: var(--fs-300);
+    --heading-eyebrow-ff: var(--ff-cadiz-bold);
+    --heading-eyebrow-case: uppercase;
+    --heading-eyebrow-leading: var(--leading-tight);
+    --heading-eyebrow-tracking: 2px;
+
+    --heading-headline-fw: var(--fw-bold);
+    --heading-headline-fs: var(--fs-700);
+    --heading-headline-ff: var(--ff-ivymode-bold);
+    --heading-headline-case: capitalize;
+    --heading-headline-leading: var(--leading-base);
+    --heading-headline-tracking: 4px;
+
+    --heading-subhead-fw: var(--fw-regular);
+    --heading-subhead-fs: var(--fs-100);
+    --heading-subhead-ff: var(--ff-cadiz-reg);
+
     /* == BREAKPOINTS ======================================================= */
 
     /* -- 768px -- */
