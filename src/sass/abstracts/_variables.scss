@@ -86,6 +86,14 @@
     --leading-base: 1.5;
     --leading-loose: 1.75;
 
+    /* -- Base -- */
+    --base-fw: var(--fw-regular);
+    --base-fs: var(--fs-300);
+    --base-ff: var(--ff-pri);
+    --base-leading: var(--leading-base);
+    --base-tracking: 1px;
+    --base-clr: var(--clr-neut-500);
+
     /* == HEADINGS ========================================================== */
     --heading-eyebrow-fw: var(--fw-bold);
     --heading-eyebrow-fs: var(--fs-300);
