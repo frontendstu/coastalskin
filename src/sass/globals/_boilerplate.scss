@@ -1,0 +1,15 @@
+/**
+ * =============================================================================
+ * Boilerplate | v1.0.0
+ * -----------------------------------------------------------------------------
+ * Defines the core global styles for the coastalskin theme, establishing 
+ * baseline typography, link styles, text element formatting, and accessibility 
+ * helpers.
+ *
+ * NOTE: These styles form the foundation of the theme's design system and 
+ * should remain minimal, with any component-specific overrides placed in their 
+ * respective partials.
+ * =============================================================================
+ */
+
+@use '../abstracts/mixins' as mixin;
