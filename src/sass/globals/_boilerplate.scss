@@ -49,4 +49,13 @@ body {
         letter-spacing: var(--heading-eyebrow-tracking);
         color: var(--heading-eyebrow-clr);
     }
+
+    &-headline {
+        font-weight: var(--heading-headline-fw);
+        font-family: var(--heading-headline-ff);
+        text-transform: var(--heading-headline-case);
+        letter-spacing: var(--heading-headline-tracking);
+        line-height: var(--heading-headline-leading);
+        color: var(--heading-headline-clr);
+    }
 }
