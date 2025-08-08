@@ -58,4 +58,10 @@ body {
         line-height: var(--heading-headline-leading);
         color: var(--heading-headline-clr);
     }
+
+    &-subheadline {
+        font-weight: var(--heading-subhead-fw);
+        font-family: var(--heading-subhead-ff);
+        color: var(--heading-subhead-clr);
+    }
 }
