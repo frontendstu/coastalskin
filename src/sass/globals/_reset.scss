@@ -1,0 +1,22 @@
+/**
+ * =============================================================================
+ * Reset Styles | v1.0.0
+ * -----------------------------------------------------------------------------
+ * Provides a minimal CSS reset for the coastalskin theme, ensuring consistent 
+ * styling across browsers and removing default user agent styles that can 
+ * interfere with the design system.
+ *
+ * Features:
+ * - Sets `box-sizing: border-box` on all elements and pseudo-elements.
+ * - Removes default margin, padding, and font inheritance issues.
+ * - Establishes `color-scheme: light` for consistent control rendering.
+ * - Ensures <body> covers at least the full viewport height.
+ * - Forces media elements to be responsive by default.
+ * - Removes default list styles from <ul> and <ol>.
+ * - Normalises button styles for cross-browser consistency.
+ * - Provides a neutral base style for <hr> elements.
+ *
+ * NOTE: This reset method is intentionally minimal and should be paired with 
+ * the theme's global styles for typography, colors, and layout.
+ * =============================================================================
+ */
