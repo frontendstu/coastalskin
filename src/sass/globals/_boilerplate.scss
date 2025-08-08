@@ -13,3 +13,30 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * =============================================================================
+ * Base Typography
+ * -----------------------------------------------------------------------------
+ * Establishes the global typographic foundation for the coastalskin theme, 
+ * Defines default styles for the <body> element and headings.
+ *
+ * Body:
+ * - Sets the base font family, base font size, weight, leading and tracking 
+ *   for general content.
+ * - Defines the default text color, sourced from the theme's color tokens
+ *
+ * Headings:
+ * - This theme only uses the <h2> and <h3> heading levels, <h1> is reserved 
+ *   for accessibility purposes.
+ * - The headings for the theme only uses class names (eyebrow, headline and 
+ *   subheadline). You will need to define the heading font sizes where required
+ * =============================================================================
+ */
+
+body {
+    font: var(--base-fw) var(--base-fs) var(--base-ff);
+    line-height: var(--base-leading);
+    letter-spacing: var(--base-tracking);
+    color: var(--base-clr);
+}
