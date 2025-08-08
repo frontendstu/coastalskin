@@ -40,3 +40,13 @@ body {
     letter-spacing: var(--base-tracking);
     color: var(--base-clr);
 }
+
+.heading {
+    &-eyebrow {
+        font-weight: var(--heading-eyebrow-fw);
+        font-family: var(--heading-eyebrow-ff);
+        text-transform: var(--heading-eyebrow-case);
+        letter-spacing: var(--heading-eyebrow-tracking);
+        color: var(--heading-eyebrow-clr);
+    }
+}
