@@ -1,0 +1,31 @@
+/**
+ * =============================================================================
+ * Header | v1.0.0
+ * -----------------------------------------------------------------------------
+ * Styles for the main header, including branding, navigation menu, and 
+ * responsive behaviours for the coastalskin theme.
+ *
+ * Features:
+ * - Fixed positioning with full-width layout and z-index to remain visible 
+ *   above content.
+ * - Wrapper section for branding and navigation alignment using flexbox.
+ * - Branding styles with hover/focus state opacity adjustments for 
+ *   interactivity.
+ * - Navigation menu with mobile and desktop layouts, including toggle button 
+ *   visibilty and state handling.
+ * - Dropdown menus with smooth slide and fade animations, hidden by default 
+ *   and revealed on hover or focus-within.
+ * - Scrolled state styles for background, shadowing and link colour 
+ *   adjustments.
+ * - Media query breakpoints:
+ *   * 48em (768px): Adjusts header wrapper padding
+ *   * 80em (1280px): Switches to full desktop navigation layout reveals 
+ *   dropdown menus on hover, and hides the mobile toggle button.
+ *
+ * NOTE: These styles control global header behaviour. Component-specific 
+ * overrides for links, buttons, or dropdown content should be placed in their 
+ * respective partials.
+ * =============================================================================
+ */
+
+@use '../abstracts/mixins' as mixin;

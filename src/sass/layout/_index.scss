@@ -11,3 +11,5 @@
 // NOTE: Import this file after globals to ensure it builds on foundational
 // styles, and before components to allow them to inherit layout context.
 // =============================================================================
+
+@forward 'header';
