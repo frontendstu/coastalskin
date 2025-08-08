@@ -42,12 +42,12 @@
     --clr-act-hsl: hsl(4 27% 69%);
 
     /* -- Neutrals (HSL Prefix) -- */
-    --clr-neut-100: hsl(0 0% 100%);
-    --clr-neut-200: hsl(220 27% 98%);
-    --clr-neut-300: hsl(220 36% 84%);
-    --clr-neut-400: hsl(221 17% 67%);
-    --clr-neut-500: hsl(219 18% 43%);
-    --clr-neut-900: hsl(219 88% 12%);
+    --clr-neut-100-hsl: hsl(0 0% 100%);
+    --clr-neut-200-hsl: hsl(220 27% 98%);
+    --clr-neut-300-hsl: hsl(220 36% 84%);
+    --clr-neut-400-hsl: hsl(221 17% 67%);
+    --clr-neut-500-hsl: hsl(219 18% 43%);
+    --clr-neut-900-hsl: hsl(219 88% 12%);
 
     /* == FONTS ======================================================= */
 
@@ -92,7 +92,7 @@
     --base-ff: var(--ff-pri);
     --base-leading: var(--leading-base);
     --base-tracking: 1px;
-    --base-clr: var(--clr-neut-500);
+    --base-clr: var(--clr-neut-500-hsl);
 
     /* == HEADINGS ========================================================== */
     --heading-eyebrow-fw: var(--fw-bold);
