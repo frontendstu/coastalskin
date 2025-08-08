@@ -65,3 +65,36 @@ body {
         color: var(--heading-subhead-clr);
     }
 }
+
+/**
+ * =============================================================================
+ * Links
+ * -----------------------------------------------------------------------------
+ * Defines the global link styles for the coastalskin themem ensuring 
+ * consistent appearance and interaction states across the theme.
+ *
+ * NOTE: These base link styles apply globally. Component-specific links (e.g., 
+ * navigation menus, buttons styled as links) should extend or override these 
+ * rules within their respective partials.
+ * =============================================================================
+ */
+
+a {
+    text-decoration: var(--link-decoration);
+    color: var(--link-clr);
+    transition: var(--link-transition);
+
+    @include mixin.hover-focus-within {
+        text-decoration: var(--link-decoration-hover);
+        color: var(--link-clr-hover);
+    }
+
+    @include mixin.focus-within {
+        @include mixin.outline(
+            $outline-width: var(--link-outline-width),
+            $outline-color: var(--link-outline-clr),
+            $outline-offset: var(--link-outline-offset),
+            $outline-radius: var(--link-outline-radius)
+        );
+    }
+}

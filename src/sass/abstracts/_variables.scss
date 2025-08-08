@@ -112,6 +112,19 @@
     --heading-subhead-ff: var(--base-ff);
     --heading-subhead-clr: var(--base-clr);
 
+    /* == LINKS ============================================================= */
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-clr: var(--base-clr);
+    --link-clr-hover: var(--clr-neut-900-hsl);
+    --link-transition: color 200ms ease-in-out;
+
+    /* -- Link Outline -- */
+    --link-outline-width: 3px;
+    --link-outline-clr: hsl(212, 100%, 83%);
+    --link-outline-offset: 3px;
+    --link-outline-radius: 4px;
+
     /* == BREAKPOINTS ======================================================= */
 
     /* -- 768px -- */
