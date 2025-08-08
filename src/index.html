@@ -16,7 +16,93 @@
         />
     </head>
     <body>
-        <!-- Add page content -->
+        <header class="header">
+            <div class="header-wrapper">
+                <div class="site-branding">
+                    <a href="index.html">
+                        <img
+                            id="site-branding"
+                            src="assets/images/logo-secondary.svg"
+                            alt=""
+                            data-logo-primary="assets/images/logo-primary.svg"
+                            data-logo-secondary="assets/images/logo-secondary.svg"
+                        />
+                        <h1 class="sr-only">Coastal Skin &plus; Beauty</h1>
+                    </a>
+                </div>
+
+                <button
+                    class="header-menu-toggle"
+                    aria-controls="header-menu"
+                    aria-expanded="false"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="16"
+                        viewBox="0 0 24 16"
+                        class="site-header-menu-icn-open"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0H24V1.68334H0V0ZM0 6.73335H24V8.41669H0V6.73335ZM24 13.4667H0V15.15H24V13.4667Z"
+                        ></path>
+                    </svg>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="19"
+                        viewBox="0 0 19 19"
+                        aria-hidden="true"
+                        class="site-header-menu-icn-close"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M9.1903 8L1.1903 0L0 1.1903L8 9.1903L0.190299 17L1.3806 18.1903L9.1903 10.3806L16.9706 18.1609L18.1609 16.9706L10.3806 9.1903L18.3512 1.21974L17.1609 0.0294375L9.1903 8Z"
+                        ></path>
+                    </svg>
+
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+
+                <nav class="header-menu" id="header-menu">
+                    <ul class="header-menu-items">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="about-us.html">About us</a>
+                        </li>
+
+                        <li>
+                            <a href="treatments.html">Treatments</a>
+
+                            <ul>
+                                <li>
+                                    <a href="#">Advanced skin treatments</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Skin rejuvenation</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Permanent hair reduction</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="contact-us.html">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <script src="js/scripts.js" async></script>
     </body>
