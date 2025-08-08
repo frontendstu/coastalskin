@@ -98,3 +98,28 @@ a {
         );
     }
 }
+
+/**
+ * =============================================================================
+ * Accessibility
+ * -----------------------------------------------------------------------------
+ * Provides utility styles for improving accessibility without affecting visual 
+ * design.
+ *
+ * NOTE: These styles should only be used for accessibility purposes only. For 
+ * visually hidden elements in all contexts, use a dedicated visibility utility 
+ * instead.
+ * =============================================================================
+ */
+
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip-path: rect(0, 0, 0, 0);
+    border: 0;
+}
