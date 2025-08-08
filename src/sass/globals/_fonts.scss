@@ -39,3 +39,28 @@
     $font-family: 'Cadiz Bold',
     $font-uri: 'assets/fonts/Cadiz/Cadiz-Bold.ttf'
 );
+
+/**
+ * =============================================================================
+ * Ivy Mode Font Family
+ * -----------------------------------------------------------------------------
+ * Registers the Ivy Mode font family in multiple weights for the coastalskin 
+ * theme. Includes semibold and bold variants.
+ *
+ * Variants:
+ * - Ivy Mode Semibold  - 600, normal style
+ * - Ivy Mode Bold      - 700, normal style
+ * =============================================================================
+ */
+
+@include mixin.font-face(
+    $font-weight: 600,
+    $font-family: 'Ivy Mode Semibold',
+    $font-uri: 'assets/fonts/IvyMode/IvyMode-SemiBold.ttf'
+);
+
+@include mixin.font-face(
+    $font-weight: 700,
+    $font-family: 'Ivy Mode Bold',
+    $font-uri: 'assets/fonts/IvyMode/IvyMode-Bold.ttf'
+);
