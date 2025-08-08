@@ -1,0 +1,16 @@
+// =============================================================================
+// Fonts | v1.0.0
+// -----------------------------------------------------------------------------
+// Contains all custom font imports for the coastalskin theme
+//
+// This partial registers and configures custom fonts using the `font-face`
+// mixin to ensure consistency and maintainability. Each font declaration
+// specifies its weight, family name, file source, and style, with
+// `font-display` set to `swap` for optimal performance and user experience.
+//
+// NOTE: This file should only handle the registration of fonts. Apply fonts
+// throughout the project using semantic custom properties defined in the
+// variables partial (e.g., --ff-base, --ff-heading, etc).
+// =============================================================================
+
+@use '../abstracts/mixins' as mixin;
