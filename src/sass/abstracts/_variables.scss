@@ -1,27 +1,27 @@
-/** 
- * =============================================================================
- * Variables | v1.0.0
- * -----------------------------------------------------------------------------
- * Defines global variables for the coastalskin theme using CSS custom 
- * properties (:root).
- *
- * This file contains the core variables for colors, typography, spacing, 
- * breakpoints, and other reusable values. Centralising these ensures visual 
- * consisitency and makes for easy updating of the design system.
- * -----------------------------------------------------------------------------
- */
+// =============================================================================
+// Variables | v1.0.0
+// -----------------------------------------------------------------------------
+// Defines global variables for the coastalskin theme using CSS custom
+// properties (:root).
+//
+// This file contains the core variables for colors, typography, spacing,
+// breakpoints, and other reusable values. Centralising these ensures visual
+// consisitency and makes for easy updating of the design system.
+// -----------------------------------------------------------------------------
 
 :root {
-    /* =========================================================================
-       COLOURS
-       -------------------------------------------------------------------------
-       A note on the colour custom properties. You'll see that there are a 
-       duplicate colour custom properties, but the difference is that one group 
-       has a hsl prefix. This is to indicate that the colour values are using 
-       the hsl function, while the colour properties that don't use the hsl 
-       prefix are the raw HSL values that are used when the need of an alpha 
-       value is required, i.e. `hsl(0 0% 100% / 0.5)`.
-       ====================================================================== */
+    /**
+     * =========================================================================
+     *  COLOURS
+     * -------------------------------------------------------------------------
+     * A note on the colour custom properties. You'll see that there are a 
+     * duplicate colour custom properties, but the difference is that one group 
+     * has a hsl prefix. This is to indicate that the colour values are using 
+     * the hsl function, while the colour properties that don't use the hsl 
+     * prefix are the raw HSL values that are used when the need of an alpha 
+     * value is required, i.e. `hsl(0 0% 100% / 0.5)`.
+     * ======================================================================== 
+     */
 
     /* -- Branding -- */
     --clr-pri: 219 89% 17%;
