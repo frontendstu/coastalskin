@@ -123,3 +123,24 @@ a {
     clip-path: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/**
+ * =============================================================================
+ * Text Elements
+ * -----------------------------------------------------------------------------
+ * Defines global styles for inline semantic text elements to ensure consistent 
+ * appearance and emphasis across the coastalskin theme.
+ *
+ * NOTE: These styles apply globally. Any component-specific overrides should 
+ * be handled within the component's partial.
+ * =============================================================================
+ */
+
+strong {
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-cadiz-bold);
+}
+
+em {
+    font-style: italic;
+}
