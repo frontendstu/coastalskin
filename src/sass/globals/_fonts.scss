@@ -14,3 +14,28 @@
 // =============================================================================
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * =============================================================================
+ * Cadiz Font Family
+ * -----------------------------------------------------------------------------
+ * Registers the Cadiz font family in multiple weights for the coastalskin 
+ * theme. Includes regular and bold variants.
+ *
+ * Variants:
+ * - Cadiz Regular  - 400, normal style
+ * - Cadiz Bold     - 700, normal style
+ * =============================================================================
+ */
+
+@include mixin.font-face(
+    $font-weight: 400,
+    $font-family: 'Cadiz Reg',
+    $font-uri: 'assets/fonts/Cadiz/Cadiz-Regular.ttf'
+);
+
+@include mixin.font-face(
+    $font-weight: 700,
+    $font-family: 'Cadiz Bold',
+    $font-uri: 'assets/fonts/Cadiz/Cadiz-Bold.ttf'
+);
