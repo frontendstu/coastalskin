@@ -1,0 +1,26 @@
+// =============================================================================
+//
+// FONT FACE
+//
+// Version: 1.0.0 (02/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// The font-face mixin is used to generate a `@font-face` declaration for
+// loading custom fonts into the site.
+//
+// This mixin is used to support modern font loading practices, including
+// variable font weight range and the use of `font-display: swap` for improved
+// loading speeds.
+//
+// =============================================================================
+
+@mixin font-face($font-url, $font-weight, $font-name, $font-style: normal) {
+    src: url(#{$font-url});
+    font-weight: #{$font-weight};
+    font-family: #{$font-name};
+    font-style: #{$font-style};
+    font-display: swap;
+}
