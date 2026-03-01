@@ -1,0 +1,20 @@
+// =============================================================================
+//
+// MIXINS INDEX
+//
+// Version: 1.0.0 (02/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// Central entry point for all mixin partials within the abstracts layer.
+//
+// This file forwards individual mixin modules from the /mixins directory,
+// providing a single, organised access point for reusable styling logic such
+// as layout helpers and utility abstractions.
+//
+// Mixin modules do not output CSS on their own; they generate CSS only when
+// included within selectors throughout the project.
+//
+// =============================================================================
