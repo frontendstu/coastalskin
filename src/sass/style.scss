@@ -1,0 +1,28 @@
+/* =============================================================================
+ *
+ * COASTALSKIN
+ *
+ * Version: 1.0.0 (01/03/2026)
+ * Author: Stu Cowley
+ * Website URI: https://coastalskin.au
+ * License: LICENSE
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * This is the primary stylesheet for the Coastal Skin + Beauty site. It acts
+ * as a central point for all Sass partials and compiles the complete
+ * architecture for the site.
+ *
+ * Architecture:
+ * The project follows a modular Sass structure, seperating concerns intro
+ * abstracts, base, layout, componets, pages and utilities styles. This ensures
+ * maintainability, scalability, and clear seperation of responsibilities
+ * throughout the codebase.
+ *
+ * Design Approach:
+ * Styling is built using a mobile-first methodology with carefully defined
+ * breakpoints (375px, 768px, 1024px, 1280px) and reusable mixins. CSS custom
+ * properties are used for design tokens such as colour, typography, and layout
+ * constraints to promote consistency and flexibility.
+ *
+ * ========================================================================== */
