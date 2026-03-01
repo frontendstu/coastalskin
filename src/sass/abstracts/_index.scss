@@ -1,0 +1,21 @@
+// =============================================================================
+//
+// ABSTRACTS
+//
+// Version: 1.0.0 (02/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// This file centralises all `@forward` directives for the abstracts layer of
+// the Sass architecture.
+//
+// The abstracts directory contains global configuration and helper logic,
+// including variables and mixins. These files do not generate CSS directly.
+// Instead they provide reusable tools that are consumed throughout the project.
+//
+// Using `@forward` ensures a clear and maintainable module system, allowing
+// other layers to access shared logic via a single entry point.
+//
+// =============================================================================
