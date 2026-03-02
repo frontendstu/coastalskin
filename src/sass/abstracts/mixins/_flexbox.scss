@@ -1,0 +1,47 @@
+// =============================================================================
+//
+// FLEXBOX
+//
+// Version: 1.0.0 (02/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// Provides a flexbox and reusable helper for applying common flexbox patterns
+// with sensible defaults.
+//
+// This mixin sets `display: flex;` and allows optional control over direction,
+// wrapping, alignment, and spacing. Defaults are defined to reflect standard
+// flex behaviour (row/nowrap), reducing the need for repetitive declarations.
+//
+// Intended to simplify layout logic while keeping flexbox usage consistent and
+// readable across the project.
+//
+// =============================================================================
+
+@mixin flexbox(
+    $direction: row,
+    $wrap: nowrap,
+    $justify: null,
+    $align-items: null,
+    $align-content: null,
+    $row-gap: null,
+    $col-gap: null
+) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    @if $justify        { justify-content: $justify; }
+    @if $align-items    { align-items: $align-items; }
+    @if $align-content  { align-content: $align-content; }
+
+    @if $row-gap and $col-gap {
+        gap: $row-gap $col-gap;
+    } @else if $row-gap {
+        row-gap: $row-gap;
+    } @else if $col-gap {
+        column-gap: $col-gap;
+    }
+}
