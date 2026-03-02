@@ -1,0 +1,58 @@
+// =============================================================================
+//
+// STATE SELECTOR
+//
+// Version: 1.0.0 (03/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// Generates a grouped selector for common interaction states and applies the
+// provided content block to each enabled state.
+//
+// This mixin is designed to standardise interactive styling patterns (e.g.
+// hover, focus, focus-visible) while keeping component code DRY and readable.
+// States can be toggled on or off per use case.
+//
+// =============================================================================
+
+@use "sass:list";
+
+@mixin state-selector(
+    $hover: true,
+    $focus: true,
+    $focus-visible: true,
+    $focus-within: false,
+    $active: false
+) {
+    $selectors: ();
+
+    @if $hover {
+        $selectors: list.append($selectors, "&:hover", comma);
+    }
+
+    @if $focus {
+        $selectors: list.append($selectors, "&:focus", comma);
+    }
+
+    @if $focus-visible {
+        $selectors: list.append($selectors, "&:focus-visible", comma);
+    }
+
+    @if $focus-within {
+        $selectors: list.append($selectors, "&:focus-within", comma);
+    }
+
+    @if $active {
+        $selectors: list.append($selectors, "&:active", comma);
+    }
+
+    @if list.length($selectors) == 0 {
+        @error "⛔ state-selector(): No states selected. Enable at least one state";
+    }
+
+    #{$selectors} {
+        @content;
+    }
+}
