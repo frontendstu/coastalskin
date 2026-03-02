@@ -1,0 +1,61 @@
+// =============================================================================
+//
+// POSITION
+//
+// Version: 1.0.0 (03/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// Reusable helper for applying CSS positioning with built-in validation
+//
+// A mixin outputs a `position` declaration using one of the permitted CSS
+// values (static, relative, absolute, fixed, sticky). An error is thrown if an
+// invalid position type is supplied, preventing accidental misuse.
+//
+// Optional offset properties (top, right, bottom, left) may be provided and
+// will only be outputted when explicitly defined.
+//
+// Designed to promote consistency, safety, and clarity when working with
+// positioned elements throughout the project.
+//
+// =============================================================================
+
+@use "sass:list";
+
+@mixin position(
+    $type,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null
+) {
+    // Allowed CSS position values
+    $allowed-positions: (static, relative, absolute, fixed, sticky);
+
+    // Validate input; throw error is incorrect position type is declared
+    @if list.index($allowed-positions, $type) == null {
+        @error "⛔ Invalid position type `#{$type}`. Valid values are: #{inspect($allowed-positions)}.";
+    }
+
+    // Output primary declaration
+    position: $type;
+
+    // Optional offsets
+    @if $top != null {
+        top: $top;
+    }
+
+    @if $right != null {
+        right: $right;
+    }
+
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+
+    @if $left != null {
+        left: $left;
+    }
+}
