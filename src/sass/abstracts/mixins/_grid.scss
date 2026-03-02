@@ -1,0 +1,62 @@
+// =============================================================================
+//
+// GRID
+//
+// Version: 1.0.0 (02/03/2026)
+// Author: Stu Cowley
+// License: LICENSE
+//
+// -----------------------------------------------------------------------------
+//
+// Provides a reusable helper for defining CSS Grid layouts with configurable
+// structure and alignment.
+//
+// This mixin sets `display: grid` and allows optional control over columns,
+// rows, template areas, spacing and item alignment. Properties are only
+// applied when explicitly provided, ensuring flexibility and predictable grid
+// configurations.
+//
+// Intended to standardise grid usage across the project while reducing
+// repetitiive declarations and improving readability.
+//
+// =============================================================================
+
+@mixin grid(
+    $cols: null,
+    $rows: null,
+    $areas: null,
+    $gap: null,
+    $place-items: null,
+    $align-items: null,
+    $justify-items: null
+) {
+    display: grid;
+
+    @if $cols {
+        grid-template-columns: repeat($cols, minmax(0, 1fr));
+    }
+
+    @if $rows {
+        grid-template-rows: repeat($rows, minmax(0, 1fr));
+    }
+
+    @if $areas {
+        grid-template-areas: $areas;
+    }
+
+    @if $gap {
+        gap: $gap;
+    }
+
+    @if $place-items {
+        place-items: $place-items;
+    } @else {
+        @if $align-items {
+            align-items: $align-items;
+        }
+
+        @if $justify {
+            justify-items: $justify-items;
+        }
+    }
+}
