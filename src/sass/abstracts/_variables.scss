@@ -21,4 +21,43 @@
  * ========================================================================== */
 
 :root {
+    /**
+     * COLOURS
+     * -------------------------------------------------------------------------
+     *
+     * Colour variables are defined in two formats.
+     *
+     * Variables prefixed was `-hsl` contain the complete `hsl()` functions and
+     * are intended for standard colour declarations.
+     *
+     * The non-prefixed versions contain the raw HSL values (e.g. `210 50% 40%)
+     * so that alpha values can be applied using `hsl(var(--token) / <alpha>`
+     * when working with transparency.
+     *
+     * =========================================================================
+
+    /* Neutrals */
+    --clr-neutral-100: 0 0% 100%;
+    --clr-neutral-200: 220 27% 98%;
+    --clr-neutral-300: 220 36% 84%;
+    --clr-neutral-500: 221 17% 67%;
+    --clr-neutral-600: 219 18% 43%;
+    --clr-neutral-900: 219 87% 12%;
+
+    --clr-neutral-100-hsl: hsl(0 0% 100%);
+    --clr-neutral-200-hsl: hsl(220 27% 98%);
+    --clr-neutral-300-hsl: hsl(220 36% 84%);
+    --clr-neutral-500-hsl: hsl(221 17% 67%);
+    --clr-neutral-600-hsl: hsl(219 18% 43%);
+    --clr-neutral-900-hsl: hsl(219 87% 12%);
+
+    /* Branding */
+    --clr-brand-primary: 219 89% 17%;
+    --clr-brand-secondary: 216 51% 73%;
+    --clr-brand-accent: 4 27% 69%;
+
+    --clr-brand-primary-hsl: hsl(219 89% 17%);
+    --clr-brand-secondary-hsl: hsl(216 51% 73%);
+    --clr-brand-accent-hsl: hsl(4 27% 69%);
+
 }
