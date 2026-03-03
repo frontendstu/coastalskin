@@ -1,0 +1,24 @@
+/* =============================================================================
+ *
+ * VARIABLES
+ *
+ * Version: 1.0.0 (03/03/2026)
+ * Author: Stu Cowley
+ * License: LICENSE
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * Defines the global CSS custom properties used throughout the project.
+ *
+ * This file contains design tokens such as colours, typography, spacing,
+ * sizing, and layout constraints. All values are declared at the `:root` level
+ * to ensure consistent access across the styling architecture.
+ *
+ * These variables act as the single source for the design system and should be
+ * updated here rather than overridden within individual components where
+ * possible.
+ *
+ * ========================================================================== */
+
+:root {
+}
