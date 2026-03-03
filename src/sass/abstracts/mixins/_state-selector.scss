@@ -21,8 +21,8 @@
 
 @mixin state-selector(
     $hover: true,
-    $focus: true,
     $focus-visible: true,
+    $focus: false,
     $focus-within: false,
     $active: false
 ) {
@@ -32,12 +32,12 @@
         $selectors: list.append($selectors, "&:hover", comma);
     }
 
-    @if $focus {
-        $selectors: list.append($selectors, "&:focus", comma);
-    }
-
     @if $focus-visible {
         $selectors: list.append($selectors, "&:focus-visible", comma);
+    }
+
+    @if $focus {
+        $selectors: list.append($selectors, "&:focus", comma);
     }
 
     @if $focus-within {
@@ -49,7 +49,7 @@
     }
 
     @if list.length($selectors) == 0 {
-        @error "⛔ state-selector(): No states selected. Enable at least one state";
+        @error "⛔ state-selector(): No states selected. Enable at least one state.";
     }
 
     #{$selectors} {
